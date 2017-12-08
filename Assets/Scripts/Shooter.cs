@@ -68,7 +68,7 @@ public class Shooter : MonoBehaviour {
             }
         }
         else {
-            if (Input.GetMouseButtonUp(0)) {
+            if (Input.GetMouseButtonDown(0)) {
                 var dest = GetGroundPoint();
                 if (dest != Vector3.down) {
                     agent.SetDestination(dest);

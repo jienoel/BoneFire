@@ -12,6 +12,11 @@ public class Shooter : MonoBehaviour {
     public float force = 10f;
     public GameObject bulletPrefab;
 
+    [Header("Hint")]
+    public LineRenderer line;
+    public float width;
+    public float length;
+
     private bool isClicked = false;
     private float clickTime = 0f;
     private Vector3 clickPos = Vector3.zero;
@@ -36,15 +41,17 @@ public class Shooter : MonoBehaviour {
             if (clickPos != Vector3.down && currPoint != Vector3.down) {
                 transform.forward = clickPos - currPoint;
             }
+            var currDir = CalculateDirection(currPoint - clickPos);
+            DisplayLine(true, currDir);
             if (Input.GetMouseButtonUp(0)) {
                 var releaseTime = Time.time;
                 if (releaseTime - clickTime < thresholdTime) {
                 }
                 else {
-                    var releasePos = GetGroundPoint();
-                    Debug.Log(string.Format("Click pos: {0}, release pos: {1}", clickPos, releasePos));
-                    if (clickPos != Vector3.down && releasePos != Vector3.down) {
-                        HandleThrow(releasePos - clickPos);
+                    if (clickPos != Vector3.down && currPoint != Vector3.down) {
+                        var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+                        bullet.GetComponent<Rigidbody>().AddForce(currDir * force, ForceMode.Impulse);
+                        DisplayLine(false, currDir);
                     }
                 }
                 isClicked = false;
@@ -52,12 +59,16 @@ public class Shooter : MonoBehaviour {
         }
     }
 
-    private void HandleThrow(Vector3 dir) {
+    private Vector3 CalculateDirection(Vector3 dir) {
         var direction = -dir.normalized;
         var magnitude = Mathf.Clamp(dir.magnitude, 0, maxDistance);
         var anotherVec = Mathf.Lerp(0, Mathf.Tan(Mathf.Deg2Rad * maxDegree), magnitude / maxDistance) * Vector3.up;
-        var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-        Debug.Log(string.Format("direction: {0}, forceVec: {1}, final: {2}", direction, anotherVec, (direction + anotherVec.normalized)));
-        bullet.GetComponent<Rigidbody>().AddForce((direction + anotherVec).normalized * force, ForceMode.Impulse);
+        return (direction + anotherVec).normalized;
+    }
+
+    private void DisplayLine(bool canDisplay, Vector3 dir) {
+        line.SetPositions(new Vector3[] { transform.position, transform.position + dir * length });
+        line.startWidth = width;
+        line.endWidth = width;
     }
 }

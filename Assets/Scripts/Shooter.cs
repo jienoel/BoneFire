@@ -36,6 +36,9 @@ public class Shooter : MonoBehaviour {
     }
 
     private void Update() {
+        if (Input.GetKeyDown(KeyCode.A)) {
+            isClicked = false;
+        }
         if (isClicked) {
             var currPoint = GetGroundPoint();
             if (clickPos != Vector3.down && currPoint != Vector3.down) {
@@ -67,8 +70,27 @@ public class Shooter : MonoBehaviour {
     }
 
     private void DisplayLine(bool canDisplay, Vector3 dir) {
-        line.SetPositions(new Vector3[] { transform.position, transform.position + dir * length });
-        line.startWidth = width;
-        line.endWidth = width;
+        if (canDisplay) {
+            var v0 = dir.y * force;
+            var x0 = transform.position.y;
+            var g = Physics.gravity.y;
+            var t = (-v0 - Mathf.Sqrt(v0 * v0 - 2 * g * x0)) / g;
+            int count = (int)(t / Time.fixedDeltaTime);
+            var positions = new Vector3[count];
+            Vector3 startPos = transform.position;
+            Vector3 vel = new Vector3(dir.x * force, v0, dir.z * force);
+            for (int i = 0; i < count; i++) {
+                startPos += vel * Time.fixedDeltaTime;
+                vel += Physics.gravity * Time.fixedDeltaTime;
+                positions[i] = startPos;
+            }
+            line.positionCount = count;
+            line.SetPositions(positions);
+            line.startWidth = width;
+            line.endWidth = width;
+        }
+        else {
+            line.positionCount = 0;
+        }
     }
 }

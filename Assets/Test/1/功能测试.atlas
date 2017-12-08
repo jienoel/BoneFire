@@ -1,0 +1,167 @@
+
+功能测试.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+02
+  rotate: false
+  xy: 386, 140
+  size: 126, 114
+  orig: 126, 114
+  offset: 0, 0
+  index: -1
+03
+  rotate: false
+  xy: 741, 182
+  size: 76, 72
+  orig: 76, 72
+  offset: 0, 0
+  index: -1
+04
+  rotate: false
+  xy: 367, 66
+  size: 32, 57
+  orig: 32, 57
+  offset: 0, 0
+  index: -1
+05
+  rotate: true
+  xy: 514, 155
+  size: 99, 118
+  orig: 99, 118
+  offset: 0, 0
+  index: -1
+06
+  rotate: true
+  xy: 451, 98
+  size: 40, 49
+  orig: 40, 49
+  offset: 0, 0
+  index: -1
+07
+  rotate: true
+  xy: 634, 151
+  size: 103, 105
+  orig: 103, 105
+  offset: 0, 0
+  index: -1
+08
+  rotate: false
+  xy: 262, 125
+  size: 122, 129
+  orig: 122, 129
+  offset: 0, 0
+  index: -1
+09
+  rotate: false
+  xy: 2, 2
+  size: 84, 54
+  orig: 84, 54
+  offset: 0, 0
+  index: -1
+10
+  rotate: true
+  xy: 451, 55
+  size: 41, 46
+  orig: 41, 46
+  offset: 0, 0
+  index: -1
+11
+  rotate: true
+  xy: 401, 63
+  size: 26, 48
+  orig: 26, 48
+  offset: 0, 0
+  index: -1
+12
+  rotate: false
+  xy: 890, 210
+  size: 76, 44
+  orig: 76, 44
+  offset: 0, 0
+  index: -1
+13
+  rotate: true
+  xy: 968, 213
+  size: 41, 52
+  orig: 41, 52
+  offset: 0, 0
+  index: -1
+14
+  rotate: false
+  xy: 819, 188
+  size: 69, 66
+  orig: 69, 66
+  offset: 0, 0
+  index: -1
+15
+  rotate: false
+  xy: 401, 91
+  size: 48, 47
+  orig: 48, 47
+  offset: 0, 0
+  index: -1
+16
+  rotate: true
+  xy: 890, 182
+  size: 26, 65
+  orig: 26, 65
+  offset: 0, 0
+  index: -1
+17
+  rotate: false
+  xy: 262, 59
+  size: 62, 64
+  orig: 62, 64
+  offset: 0, 0
+  index: -1
+18
+  rotate: true
+  xy: 2, 58
+  size: 196, 258
+  orig: 196, 258
+  offset: 0, 0
+  index: -1
+19
+  rotate: false
+  xy: 562, 113
+  size: 40, 40
+  orig: 40, 40
+  offset: 0, 0
+  index: -1
+20
+  rotate: true
+  xy: 88, 17
+  size: 39, 85
+  orig: 39, 85
+  offset: 0, 0
+  index: -1
+21
+  rotate: true
+  xy: 175, 23
+  size: 33, 78
+  orig: 33, 78
+  offset: 0, 0
+  index: -1
+22
+  rotate: true
+  xy: 514, 125
+  size: 28, 46
+  orig: 28, 46
+  offset: 0, 0
+  index: -1
+图层 1
+  rotate: false
+  xy: 741, 151
+  size: 70, 29
+  orig: 70, 29
+  offset: 0, 0
+  index: -1
+图层 2
+  rotate: true
+  xy: 326, 59
+  size: 64, 39
+  orig: 64, 39
+  offset: 0, 0
+  index: -1

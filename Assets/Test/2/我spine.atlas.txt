@@ -1,0 +1,83 @@
+
+我spine.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+01
+  rotate: false
+  xy: 196, 72
+  size: 47, 118
+  orig: 47, 118
+  offset: 0, 0
+  index: -1
+02
+  rotate: false
+  xy: 431, 228
+  size: 66, 26
+  orig: 66, 26
+  offset: 0, 0
+  index: -1
+03
+  rotate: false
+  xy: 196, 192
+  size: 132, 62
+  orig: 132, 62
+  offset: 0, 0
+  index: -1
+04
+  rotate: true
+  xy: 111, 14
+  size: 22, 67
+  orig: 22, 67
+  offset: 0, 0
+  index: -1
+05
+  rotate: false
+  xy: 2, 64
+  size: 192, 190
+  orig: 192, 190
+  offset: 0, 0
+  index: -1
+06
+  rotate: true
+  xy: 2, 2
+  size: 60, 107
+  orig: 60, 107
+  offset: 0, 0
+  index: -1
+07
+  rotate: true
+  xy: 330, 198
+  size: 56, 99
+  orig: 56, 99
+  offset: 0, 0
+  index: -1
+08
+  rotate: true
+  xy: 245, 103
+  size: 87, 65
+  orig: 87, 65
+  offset: 0, 0
+  index: -1
+09
+  rotate: true
+  xy: 312, 154
+  size: 36, 15
+  orig: 36, 15
+  offset: 0, 0
+  index: -1
+10
+  rotate: true
+  xy: 111, 38
+  size: 24, 69
+  orig: 24, 69
+  offset: 0, 0
+  index: -1
+11
+  rotate: false
+  xy: 245, 81
+  size: 56, 20
+  orig: 56, 20
+  offset: 0, 0
+  index: -1

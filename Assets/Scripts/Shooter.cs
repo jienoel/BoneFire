@@ -84,6 +84,7 @@ public class Shooter : MonoBehaviour {
                 vel += Physics.gravity * Time.fixedDeltaTime;
                 positions[i] = startPos;
             }
+            //line.material.mainTextureScale = new Vector2(count / 4f, 1);
             line.positionCount = count;
             line.SetPositions(positions);
             line.startWidth = width;

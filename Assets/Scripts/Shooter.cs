@@ -32,10 +32,13 @@ public class Shooter : MonoBehaviour {
 
     private void Update() {
         if (isClicked) {
+            var currPoint = GetGroundPoint();
+            if (clickPos != Vector3.down && currPoint != Vector3.down) {
+                transform.forward = clickPos - currPoint;
+            }
             if (Input.GetMouseButtonUp(0)) {
                 var releaseTime = Time.time;
                 if (releaseTime - clickTime < thresholdTime) {
-                    isClicked = false;
                 }
                 else {
                     var releasePos = GetGroundPoint();
@@ -44,6 +47,7 @@ public class Shooter : MonoBehaviour {
                         HandleThrow(releasePos - clickPos);
                     }
                 }
+                isClicked = false;
             }
         }
     }

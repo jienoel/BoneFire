@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Shooter : MonoBehaviour {
     [Header("Input")]
@@ -20,6 +21,12 @@ public class Shooter : MonoBehaviour {
     private bool isClicked = false;
     private float clickTime = 0f;
     private Vector3 clickPos = Vector3.zero;
+
+    private NavMeshAgent agent;
+
+    private void Start() {
+        agent = GetComponent<NavMeshAgent>();
+    }
 
     private Vector3 GetGroundPoint() {
         RaycastHit hit;
@@ -58,6 +65,14 @@ public class Shooter : MonoBehaviour {
                     }
                 }
                 isClicked = false;
+            }
+        }
+        else {
+            if (Input.GetMouseButtonUp(0)) {
+                var dest = GetGroundPoint();
+                if (dest != Vector3.down) {
+                    agent.SetDestination(dest);
+                }
             }
         }
     }

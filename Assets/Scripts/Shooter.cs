@@ -65,6 +65,7 @@ public class Shooter : MonoBehaviour {
                     }
                 }
                 isClicked = false;
+                transform.rotation = Quaternion.identity;
             }
         }
         else {

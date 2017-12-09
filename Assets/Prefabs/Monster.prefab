@@ -403,6 +403,7 @@ MonoBehaviour:
   - {fileID: 114929031359403704}
   - {fileID: 114288975861518134}
   - {fileID: 114337504729246328}
+  diamond: {fileID: 1826201893091276, guid: 90d389b9098666c40af8469f57439e8b, type: 2}
 --- !u!114 &114337504729246328
 MonoBehaviour:
   m_ObjectHideFlags: 1

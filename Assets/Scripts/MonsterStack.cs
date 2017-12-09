@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MonsterStack : MonoBehaviour {
     public HitAndChangeColor[] monsterParts;
+    public GameObject diamond;
 
     private void Update() {
         bool isSame = true;
@@ -16,6 +17,7 @@ public class MonsterStack : MonoBehaviour {
         }
         if (isSame) {
             Debug.Log(string.Format("{0} died.", name));
+            Instantiate(diamond, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

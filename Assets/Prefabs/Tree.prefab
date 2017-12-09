@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 23329816291869322}
   - component: {fileID: 114495652887136726}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1281943294904664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.3, y: 1, z: -9.2}
+  m_LocalPosition: {x: -5.3, y: 1.5, z: -9.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4937913788976176}
@@ -97,7 +97,7 @@ Transform:
   m_GameObject: {fileID: 1999181148321386}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 4503228326295832}
   m_RootOrder: 0

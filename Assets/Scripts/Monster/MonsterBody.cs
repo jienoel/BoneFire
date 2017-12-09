@@ -9,9 +9,20 @@ public class MonsterBody : MonoBehaviour
     public int colorIndex;
     // set by hitAndChangeColor, read by monster
     SpriteRenderer render;
+    Vector3 lastPosition;
 
     void Awake()
     {
+        Init();
+    }
+
+    bool init;
+
+    void Init()
+    {
+        if (init)
+            return;
+        init = true;
         if (animator == null)
         {
             animator = GetComponent<Animator>();
@@ -25,8 +36,24 @@ public class MonsterBody : MonoBehaviour
         render.enabled = false;
     }
 
+    void Start()
+    {
+        lastPosition = transform.position;
+    }
+
+    void LateUpdate()
+    {
+        if (lastPosition != transform.position)
+        {
+            Game.FlipSprite(render, transform.position - lastPosition);
+            lastPosition = transform.position;
+        }
+    }
+
     public void EnableBody(int colorID)
     {
+        if (!init)
+            Init();
         render.enabled = true;
         animator.enabled = true;
         ChangeColor(colorID);

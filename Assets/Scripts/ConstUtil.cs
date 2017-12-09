@@ -4,8 +4,9 @@ using System.Collections.Generic;
 public class ColorTable
 {
     public const int Red = 0;
-    public const int Green = 1;
-    public const int Max = 2;
+    public const int Yellow = 1;
+    public const int Blue = 2;
+    public const int Max = 3;
 
     public static bool isColorValid(int color)
     {
@@ -38,6 +39,16 @@ public class AnimatorParam
     public const string TrigerAttackPre = "AttackPre";
 
     public const string TriggerAttack = "Attack";
+
+    public const string BoolHasAtkTarget = "HasAtkTarget";
+}
+
+public enum AnimatorParamType
+{
+    Float,
+    Trigger,
+    Bool,
+    Int
 }
 
 

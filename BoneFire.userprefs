@@ -1,18 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Editor/ChangeName.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Test/TestRunning.cs">
     <Files>
-      <File FileName="Assets/Scripts/HitAndChangeColor.cs" Line="12" Column="27" />
-      <File FileName="Assets/Scripts/Monster/MonsterBody.cs" Line="41" Column="18" />
-      <File FileName="Assets/Scripts/ConstUtil.cs" Line="33" Column="1" />
-      <File FileName="Assets/Scripts/WindBlowFire.cs" Line="9" Column="32" />
-      <File FileName="Assets/Scripts/Game.cs" Line="11" Column="60" />
-      <File FileName="Assets/Scripts/GameSignals.cs" Line="27" Column="6" />
-      <File FileName="Assets/Scripts/Monster/Monster.cs" Line="10" Column="25" />
-      <File FileName="Assets/Scripts/Shooter.cs" Line="243" Column="5" />
-      <File FileName="Assets/Scripts/Test/TestRunning.cs" Line="40" Column="34" />
-      <File FileName="Assets/Scripts/Level/LevelData.cs" Line="13" Column="42" />
-      <File FileName="Assets/Scripts/Editor/ChangeName.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HitAndChangeColor.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Monster/MonsterBody.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ConstUtil.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/WindBlowFire.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Game.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameSignals.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Monster/Monster.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Shooter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Test/TestRunning.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Level/LevelData.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

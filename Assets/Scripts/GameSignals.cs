@@ -8,8 +8,9 @@ public static class GameSignals
     public static Action onPlayerDie;
     public static Action onFirePileExtinguish;
     public static Action onPlayerRelive;
+    public static Action<Transform> onTreeFired;
+    public static Action<Transform> onTreeDestroy;
 
-   
     public static void InvokeAction(Action action)
     {
         if (action != null)

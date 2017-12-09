@@ -32,6 +32,7 @@ public class Shooter : MonoBehaviour
 
     public int hp;
     public int hpMax = 100;
+    public bool inSafeArea;
 
     public bool isDie
     {
@@ -90,9 +91,10 @@ public class Shooter : MonoBehaviour
 
     void FlipSprite(Vector3 forward)
     {
-        Vector3 v = Vector3.Project(forward, Vector3.right);
-        if (render.flipX != (v.x < 0))
-            render.flipX = v.x < 0;
+//        Vector3 v = Vector3.Project(forward, Vector3.right);
+//        if (render.flipX != (v.x < 0))
+//            render.flipX = v.x < 0;
+        Game.FlipSprite(render, forward);
     }
 
     private void Update()

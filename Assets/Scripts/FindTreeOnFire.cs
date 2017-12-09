@@ -15,7 +15,7 @@ public class FindTreeOnFire : MonoBehaviour {
         var trees = GameObject.FindGameObjectsWithTag("Tree");
         foreach (var t in trees) {
             if (Vector3.Distance(t.transform.position, transform.position) < maxDistance && t.GetComponent<HitAndFire>().isOnFire) {
-                monster.target = t.transform;
+                monster.foodTarget = t.transform;
                 break;
             }
         }

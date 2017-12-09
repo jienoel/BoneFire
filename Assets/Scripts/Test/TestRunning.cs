@@ -14,7 +14,7 @@ public class TestRunning : MonoBehaviour
     public Transform MonsterParent;
     public Transform campfireParent;
 
-    public bool importTree;
+    public bool importTree = false;
     public Transform newTreeParent;
 
     public enum SpawnType
@@ -23,6 +23,11 @@ public class TestRunning : MonoBehaviour
         Monster,
         Campfire,
         None
+    }
+
+    void OnEnable()
+    {
+        importTree = false;
     }
 
     private Vector3 GetGroundPoint()

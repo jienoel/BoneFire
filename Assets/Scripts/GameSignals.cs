@@ -11,6 +11,10 @@ public static class GameSignals
     public static Action<Transform> onTreeFired;
     public static Action<Transform> onTreeDestroy;
 
+    public static Action<int> onPutDiamond;
+    public static Action<int> onPlayerHitDiamond;
+    public static Action<string> onTrigeSafeArea;
+
     public static void InvokeAction(Action action)
     {
         if (action != null)
@@ -26,6 +30,8 @@ public static class GameSignals
             action(param);
         }
     }
+
+
 }
 
 

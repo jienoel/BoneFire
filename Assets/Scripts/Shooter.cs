@@ -34,6 +34,34 @@ public class Shooter : MonoBehaviour
     public int hpMax = 100;
     public bool inSafeArea;
 
+    int _diamondColor;
+
+    public int diamondColor
+    {
+        get
+        {
+            return _diamondColor;
+        }
+        set
+        {
+            if (_diamondColor != value)
+            {
+                if (ColorTable.isColorValid(value))
+                {
+                    diamondRender.sprite = diamondSprites[value];
+                }
+                else
+                {
+                    diamondRender.sprite = null;
+                }
+            }
+            _diamondColor = value;
+        }
+    }
+
+    public SpriteRenderer diamondRender;
+    public Sprite[] diamondSprites;
+
     public bool isDie
     {
         get
@@ -57,6 +85,24 @@ public class Shooter : MonoBehaviour
     {
         hp = hpMax;
         lastPosition = transform.position;
+        GameSignals.onPutDiamond += OnPutDiamond;
+        GameSignals.onPlayerHitDiamond += OnPlayerHitDiamond;
+    }
+
+    void OnDestroy()
+    {
+        GameSignals.onPutDiamond -= OnPutDiamond;
+        GameSignals.onPlayerHitDiamond -= OnPlayerHitDiamond;
+    }
+
+    void OnPlayerHitDiamond(int color)
+    {
+        diamondColor = color;
+    }
+
+    void OnPutDiamond(int color)
+    {
+        diamondColor = -1;
     }
 
     private Vector3 GetGroundPoint()
@@ -180,8 +226,10 @@ public class Shooter : MonoBehaviour
             var g = Physics.gravity.y;
             var t = (-v0 - Mathf.Sqrt(v0 * v0 - 2 * g * x0)) / g;
             int count = (int)(t / Time.fixedDeltaTime);
-            if (count > 10000) count = 10000;
-            if (count < 0) count = 0;
+            if (count > 10000)
+                count = 10000;
+            if (count < 0)
+                count = 0;
             var positions = new Vector3[count];
             Vector3 startPos = transform.position;
             Vector3 vel = new Vector3(dir.x * force, v0, dir.z * force);

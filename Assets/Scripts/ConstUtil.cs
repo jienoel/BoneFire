@@ -10,7 +10,7 @@ public class ColorTable
 
     public static bool isColorValid(int color)
     {
-        return color < Max;
+        return color < Max && color >= 0;
     }
 }
 

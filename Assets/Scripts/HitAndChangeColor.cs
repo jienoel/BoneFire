@@ -7,6 +7,8 @@ public class HitAndChangeColor : MonoBehaviour {
     private Color[] color = { Color.red, Color.yellow, Color.cyan };
     private Renderer renderer;
 
+    public MonsterStack stack;
+
     private void Start() {
         renderer = GetComponent<Renderer>();
         renderer.material.color = color[colorIndex];
@@ -16,6 +18,7 @@ public class HitAndChangeColor : MonoBehaviour {
         if (collision.gameObject.tag == "Bullet") {
             colorIndex = (colorIndex + 1) % 3;
             renderer.material.color = color[colorIndex];
+            stack.HitAndChase();
         }
     }
 }

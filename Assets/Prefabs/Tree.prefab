@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   burnTime: 3
+  rescueTime: 1
 --- !u!212 &212421503771866130
 SpriteRenderer:
   m_ObjectHideFlags: 1

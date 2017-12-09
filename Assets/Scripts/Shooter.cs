@@ -180,6 +180,8 @@ public class Shooter : MonoBehaviour
             var g = Physics.gravity.y;
             var t = (-v0 - Mathf.Sqrt(v0 * v0 - 2 * g * x0)) / g;
             int count = (int)(t / Time.fixedDeltaTime);
+            if (count > 10000) count = 10000;
+            if (count < 0) count = 0;
             var positions = new Vector3[count];
             Vector3 startPos = transform.position;
             Vector3 vel = new Vector3(dir.x * force, v0, dir.z * force);

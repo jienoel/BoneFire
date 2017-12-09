@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[ExecuteInEditMode]
 public class TestRunning : MonoBehaviour
 {
     public LayerMask groundLayer;
@@ -13,6 +13,9 @@ public class TestRunning : MonoBehaviour
     public Transform TreeParent;
     public Transform MonsterParent;
     public Transform campfireParent;
+
+    public bool importTree;
+    public Transform newTreeParent;
 
     public enum SpawnType
     {
@@ -34,6 +37,11 @@ public class TestRunning : MonoBehaviour
 
     private void Update()
     {
+        if (importTree)
+        {
+            importTree = false;
+            ImportTree();
+        }
         if (Input.GetMouseButtonDown(0))
         {
             var dest = GetGroundPoint();
@@ -52,6 +60,14 @@ public class TestRunning : MonoBehaviour
                         break;
                 }
             }
+        }
+    }
+
+    void ImportTree()
+    {
+        foreach (Transform tran in TreeParent.transform)
+        {
+            CreatGameObject(treePrefab, newTreeParent, tran.position).name = tran.name;
         }
     }
 

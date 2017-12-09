@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitAndFire : MonoBehaviour {
+public class HitAndFire : MonoBehaviour, IChaseable {
     public float burnTime;
     public float rescueTime;
 
@@ -13,16 +13,10 @@ public class HitAndFire : MonoBehaviour {
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag == "Bullet") {
             Debug.Log(string.Format("{0} is on fire", name));
-            if (burn_CO != null) {
+            if (burn_CO == null) {
                 isOnFire = true;
                 burn_CO = StartCoroutine(Burning());
             }
-        }
-        if (collision.gameObject.tag == "Monster") {
-            if (burn_CO != null) {
-                StopCoroutine(burn_CO);
-            }
-            burn_CO = StartCoroutine(Rescue(collision.gameObject.GetComponentInParent<MonsterStack>()));
         }
     }
 
@@ -31,9 +25,17 @@ public class HitAndFire : MonoBehaviour {
         Destroy(transform.parent.gameObject);
     }
 
-    private IEnumerator Rescue(MonsterStack monster) {
+    private IEnumerator Rescue() {
         yield return new WaitForSeconds(rescueTime);
         Debug.Log("Rescued");
         isOnFire = false;
+    }
+
+    public void Arrived() {
+        Debug.Log("burnArrive");
+        if (burn_CO != null) {
+            StopCoroutine(burn_CO);
+        }
+        burn_CO = StartCoroutine(Rescue());
     }
 }

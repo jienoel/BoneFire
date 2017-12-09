@@ -6,6 +6,7 @@ public class MonsterBody : MonoBehaviour
 {
     public int BodyID;
     public Animator animator;
+    public int colorIndex; // set by hitAndChangeColor, read by monster
     SpriteRenderer render;
 
     void Awake()
@@ -36,6 +37,7 @@ public class MonsterBody : MonoBehaviour
         {
             animator.SetInteger(AnimatorParam.Color, colorID);
             Debug.Log("set color:" + colorID);
+            colorIndex = colorID;
         }
     }
 

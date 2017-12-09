@@ -25,10 +25,6 @@ public class MonsterStack : MonoBehaviour {
             }
         }
         if (isSame) {
-            Debug.Log(string.Format("{0} died.", name));
-            Instantiate(diamond, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            return;
         }
         if (isChasing) {
             agent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);

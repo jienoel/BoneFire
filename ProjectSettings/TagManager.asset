@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bullet
   - Diamond
+  - Tree
+  - Monster
   layers:
   - Default
   - TransparentFX

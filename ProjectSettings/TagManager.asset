@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Bullet
   - Diamond
+  - Tree
+  - Monster
+  - PlayerStartPos
   layers:
   - Default
   - TransparentFX

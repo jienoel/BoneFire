@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode]
+
 public class TestRunning : MonoBehaviour
 {
     public LayerMask groundLayer;
@@ -37,7 +37,6 @@ public class TestRunning : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             var dest = GetGroundPoint();
-            Debug.Log("dest:" + dest);
             if (dest != Vector3.down)
             {
                 switch (spawnType)

@@ -1,10 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MonsterStack : MonoBehaviour {
     public HitAndChangeColor[] monsterParts;
     public GameObject diamond;
+
+    private NavMeshAgent agent;
+    private bool isChasing;
+    private bool isTreeing;
+
+    private void Start() {
+        agent = GetComponent<NavMeshAgent>();
+    }
 
     private void Update() {
         bool isSame = true;
@@ -16,9 +25,13 @@ public class MonsterStack : MonoBehaviour {
             }
         }
         if (isSame) {
-            Debug.Log(string.Format("{0} died.", name));
-            Instantiate(diamond, transform.position, Quaternion.identity);
-            Destroy(gameObject);
         }
+        if (isChasing) {
+            agent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
+        }
+    }
+
+    public void HitAndChase() {
+        isChasing = true;
     }
 }

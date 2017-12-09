@@ -1,16 +1,18 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Shooter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Editor/ChangeName.cs">
     <Files>
-      <File FileName="Assets/Scripts/HitAndChangeColor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Monster/MonsterBody.cs" Line="37" Column="52" />
-      <File FileName="Assets/Scripts/ConstUtil.cs" Line="33" Column="47" />
+      <File FileName="Assets/Scripts/HitAndChangeColor.cs" Line="12" Column="27" />
+      <File FileName="Assets/Scripts/Monster/MonsterBody.cs" Line="41" Column="18" />
+      <File FileName="Assets/Scripts/ConstUtil.cs" Line="33" Column="1" />
       <File FileName="Assets/Scripts/WindBlowFire.cs" Line="9" Column="32" />
-      <File FileName="Assets/Scripts/Game.cs" Line="38" Column="9" />
-      <File FileName="Assets/Scripts/GameSignals.cs" Line="11" Column="5" />
-      <File FileName="Assets/Scripts/Monster/Monster.cs" Line="8" Column="5" />
-      <File FileName="Assets/Scripts/Player/Player.cs" Line="49" Column="1" />
-      <File FileName="Assets/Scripts/Shooter.cs" Line="77" Column="14" />
+      <File FileName="Assets/Scripts/Game.cs" Line="11" Column="60" />
+      <File FileName="Assets/Scripts/GameSignals.cs" Line="27" Column="6" />
+      <File FileName="Assets/Scripts/Monster/Monster.cs" Line="10" Column="25" />
+      <File FileName="Assets/Scripts/Shooter.cs" Line="243" Column="5" />
+      <File FileName="Assets/Scripts/Test/TestRunning.cs" Line="40" Column="34" />
+      <File FileName="Assets/Scripts/Level/LevelData.cs" Line="13" Column="42" />
+      <File FileName="Assets/Scripts/Editor/ChangeName.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

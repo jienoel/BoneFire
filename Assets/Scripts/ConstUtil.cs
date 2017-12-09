@@ -30,5 +30,15 @@ public class AnimatorParam
 
     public const string BoolDie = "Die";
 
-    public const string BoolRelive = "Relive";
+
+    public const string FloatSpeed = "Speed";
+
+    public const string TriggerHurt = "Hurt";
+
+    public const string TrigerAttackPre = "AttackPre";
+
+    public const string TriggerAttack = "Attack";
 }
+
+
+

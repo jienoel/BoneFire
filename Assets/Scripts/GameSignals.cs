@@ -9,6 +9,7 @@ public static class GameSignals
     public static Action onFirePileExtinguish;
     public static Action onPlayerRelive;
 
+   
     public static void InvokeAction(Action action)
     {
         if (action != null)

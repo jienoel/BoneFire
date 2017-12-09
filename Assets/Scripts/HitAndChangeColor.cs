@@ -7,15 +7,17 @@ public class HitAndChangeColor : MonoBehaviour {
     private Color[] color = { Color.red, Color.yellow, Color.cyan };
     private Renderer renderer;
 
+    public MonsterBody body;
+
     private void Start() {
-        renderer = GetComponent<Renderer>();
-        renderer.material.color = color[colorIndex];
+        body.EnableBody(colorIndex);
     }
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.tag == "Bullet") {
-            colorIndex = (colorIndex + 1) % 3;
-            renderer.material.color = color[colorIndex];
+            colorIndex = (colorIndex + 1) % ColorTable.Max;
+            body.ChangeColor(colorIndex);
+            GetComponentInParent<Monster>().HitByPlayer();
         }
     }
 }

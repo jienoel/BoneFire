@@ -608,7 +608,7 @@ MonoBehaviour:
   waitCDMax: 15
   stayCDWhenChaseBlock: 10
   patrolPos: {x: 0, y: 0, z: 0}
-  hasPlayerRender: {fileID: 0}
+  hasPlayerRender: {fileID: 212133375207939290}
   animationLazy: 0
   jumpRender: {fileID: 212631311361635262}
   jumpEffectAnim: {fileID: 95272033016028470}

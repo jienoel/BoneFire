@@ -18,9 +18,9 @@ public class MonsterBody : MonoBehaviour
         {
             render = GetComponent<SpriteRenderer>();
         }
-//        animator.enabled = false;
-//        render.sprite = null;
-//        render.enabled = false;
+        animator.enabled = false;
+        render.sprite = null;
+        render.enabled = false;
     }
 
     public void EnableBody(int colorID)
@@ -35,7 +35,6 @@ public class MonsterBody : MonoBehaviour
         if (ColorTable.isColorValid(colorID))
         {
             animator.SetInteger(AnimatorParam.Color, colorID);
-            Debug.Log("set color:" + colorID);
         }
     }
 

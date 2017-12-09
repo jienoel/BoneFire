@@ -26,4 +26,9 @@ public class BodyID
 public class AnimatorParam
 {
     public const string Color = "Color";
+
+
+    public const string BoolDie = "Die";
+
+    public const string BoolRelive = "Relive";
 }

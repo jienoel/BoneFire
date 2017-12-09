@@ -17,13 +17,11 @@ public class CameraFollow : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         offset = target.position - transform.position;
-        Debug.Log(offset);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         var position = target.position - offset;
-        Debug.Log(string.Format("Position: {0}", position));
         if (Mathf.Abs(transform.position.x - position.x) > xWindow) {
             if (transform.position.x < position.x) position.x -= xWindow;
             if (transform.position.x > position.x) position.x += xWindow;

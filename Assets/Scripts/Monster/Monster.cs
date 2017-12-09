@@ -223,9 +223,13 @@ public class Monster : MonoBehaviour
     {
         if (IsPlayerInSafeArea() && InPlayerAttackRange())
         {
-            //TODO @zhuchaojie  离开玩家攻击距离的位置移动,设置PatrolPos
+            var degree = Random.Range(0, 360);
+            patrolPos = transform.position + new Vector3(Mathf.Sin(degree), 0, Mathf.Cos(degree)) * 10;
+            ////TODO @zhuchaojie  离开玩家攻击距离的位置移动,设置PatrolPos
         }
-        patrolPos = transform.position + new Vector3(10, 0, 10);
+        else {
+            patrolPos = transform.position + new Vector3(10, 0, 10);
+        }
     }
 
     void OnPatrolStatus()

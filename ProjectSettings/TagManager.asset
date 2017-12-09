@@ -46,12 +46,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Entity
+    uniqueID: 1331713577
+    locked: 0
   - name: Tree
     uniqueID: 3565900857
     locked: 0
   - name: Fire
     uniqueID: 597080127
-    locked: 0
-  - name: Entity
-    uniqueID: 1331713577
     locked: 0

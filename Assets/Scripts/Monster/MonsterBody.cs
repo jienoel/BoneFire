@@ -33,7 +33,10 @@ public class MonsterBody : MonoBehaviour
     public void ChangeColor(int colorID)
     {
         if (ColorTable.isColorValid(colorID))
-            animator.SetFloat(AnimatorParam.Color, colorID);
+        {
+            animator.SetInteger(AnimatorParam.Color, colorID);
+            Debug.Log("set color:" + colorID);
+        }
     }
 
     public  bool changeColor1;

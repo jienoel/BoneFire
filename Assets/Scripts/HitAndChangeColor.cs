@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class HitAndChangeColor : MonoBehaviour
 {
-    public int colorIndex;
     private Color[] color = { Color.red, Color.yellow, Color.cyan };
     private Renderer renderer;
 
     public MonsterBody body;
+    public Monster monster;
 
     private void Start()
     {
-        body.EnableBody(colorIndex);
+//        body.EnableBody(colorIndex);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            colorIndex = (colorIndex + 1) % ColorTable.Max;
-            body.ChangeColor(colorIndex);
-            GetComponentInParent<Monster>().HitByPlayer();
+           
+            GetComponentInParent<Monster>().HitByPlayer(body);
         }
     }
 }

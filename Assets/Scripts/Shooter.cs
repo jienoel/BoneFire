@@ -119,6 +119,7 @@ public class Shooter : MonoBehaviour
     {
         if (!isClicked)
         {
+           
             animator.SetTrigger(AnimatorParam.TrigerAttackPre);
         }
         isClicked = true;
@@ -148,6 +149,7 @@ public class Shooter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             isClicked = false;
+            animator.ResetTrigger(AnimatorParam.TrigerAttackPre);
         }
         if (isClicked)
         {
@@ -178,6 +180,7 @@ public class Shooter : MonoBehaviour
                     }
                 }
                 isClicked = false;
+                animator.ResetTrigger(AnimatorParam.TrigerAttackPre);
                 transform.rotation = Quaternion.identity;
             }
         }

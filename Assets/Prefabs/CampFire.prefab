@@ -581,12 +581,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9c21926062f428c8d23f62bd058b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightedAltar: {fileID: 0}
-  unLightedAltar: {fileID: 0}
+  lightedAltar: {fileID: 21300000, guid: 704dabca4c7c843a48e240d71e93668f, type: 3}
+  unLightedAltar: {fileID: 21300000, guid: a96579705db594ebcb4023c1a047b364, type: 3}
   altarRender: {fileID: 0}
-  redDiamondRender: {fileID: 0}
-  yellowDiamondRender3: {fileID: 0}
-  blueDiamondRender2: {fileID: 0}
+  redDiamondRender: {fileID: 212215524083636278}
+  yellowDiamondRender3: {fileID: 212113084478698756}
+  blueDiamondRender2: {fileID: 212035860223289780}
 --- !u!114 &114844962854559988
 MonoBehaviour:
   m_ObjectHideFlags: 1

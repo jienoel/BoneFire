@@ -14,7 +14,7 @@ public class ColorTable
     }
 }
 
-public class BodyID
+public class EBodyID
 {
     public const int Zero = 0;
     public const int One = 1;

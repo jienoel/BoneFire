@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
 public enum MonsterStatus
 {
     //待机
@@ -36,6 +37,12 @@ public class Monster : MonoBehaviour
     {
         monsterBodies.Clear();
         monsterBodies.AddRange(GetComponentsInChildren<MonsterBody>());
+        monsterBodies.Sort(
+            delegate(MonsterBody p1, MonsterBody p2)
+            {
+                return p1.bodyID.CompareTo(p2.bodyID);
+            }
+        );
     }
     // Use this for initialization
     void Start()
@@ -70,21 +77,50 @@ public class Monster : MonoBehaviour
 
     private bool IsDie()
     {
-        bool isSame = true;
-        var c = monsterBodies[0].colorIndex;
+       
+//        var c = monsterBodies[0].colorIndex;
+        int red = 0;
+        int yellow = 0;
+        int blue = 0;
         foreach (var m in monsterBodies)
         {
-            if (m.colorIndex != c)
+            if (m.colorIndex == ColorTable.Blue)
             {
-                isSame = false;
-                break;
+                blue = 1;
+            }
+            else if (m.colorIndex == ColorTable.Yellow)
+            {
+                yellow = 1;
+            }
+            else
+            {
+                red = 1;
             }
         }
-        return isSame;
+        int value = red << 2 | yellow << 1 | blue;
+//        Debug.Log(value + "  red:" + red + "  yellow:" + yellow + " Blue: " + blue);
+        return value == 0 || value == 1 || value == 2 || value == 4;
     }
 
-    public void HitByPlayer()
+    public float animationLazy;
+
+    //    float GetAnimatorNormalizedTime(MonsterBody body)
+    //    {
+    //        float time = 0;
+    //        foreach (MonsterBody last in monsterBodies)
+    //        {
+    //            if (last.bodyID == body.bodyID - 1)
+    //            {
+    //                time = last.animator.GetCurrentAnimatorStateInfo(0).normalizedTime - animationLazy;
+    //            }
+    //        }
+    //        return time;
+    //    }
+
+    public void HitByPlayer(MonsterBody body)
     {
+        body.colorIndex = (body.colorIndex + 1) % ColorTable.Max;
+        body.ChangeColor(body.colorIndex);
         if (status == MonsterStatus.Die)
         {
             return;
@@ -101,7 +137,7 @@ public class Monster : MonoBehaviour
 
     }
 
-    void SetAnimator(AnimatorParamType paramType, string name, object value)
+    public  void SetAnimator(AnimatorParamType paramType, string name, object value)
     {
         foreach (MonsterBody body in monsterBodies)
         {
@@ -145,11 +181,11 @@ public class Monster : MonoBehaviour
 
     void CheckStatusUpdate()
     {
-        if (IsDie())
+        if (status != MonsterStatus.Die && IsDie())
         {
             OnStatusChange(MonsterStatus.Die);
         }
-        else if (status == MonsterStatus.EatFireFood)
+        if (status == MonsterStatus.EatFireFood)
         {
             OnEatFireStatus();
         }
@@ -221,15 +257,13 @@ public class Monster : MonoBehaviour
 
     void EnterPatrolStatus()
     {
+        Debug.Log("Enter PatrolStatus");
         if (IsPlayerInSafeArea() && InPlayerAttackRange())
         {
-            var degree = Random.Range(0, 360);
-            patrolPos = transform.position + new Vector3(Mathf.Sin(degree), 0, Mathf.Cos(degree)) * 10;
             ////TODO @zhuchaojie  离开玩家攻击距离的位置移动,设置PatrolPos
         }
-        else {
-            patrolPos = transform.position + new Vector3(10, 0, 10);
-        }
+        var degree = Random.Range(0, 360);
+        patrolPos = transform.position + new Vector3(Mathf.Sin(degree), 0, Mathf.Cos(degree)) * 10;
     }
 
     void OnPatrolStatus()
@@ -244,13 +278,13 @@ public class Monster : MonoBehaviour
             OnStatusChange(MonsterStatus.ChasePlayer);
             return;
         }
-
+        agent.SetDestination(patrolPos);
         if (agent.velocity.magnitude <= 0)
         {
             OnStatusChange(MonsterStatus.Wait);
             return;
         }
-        agent.SetDestination(patrolPos);
+    
     }
 
     void OnEatFireStatus()
@@ -319,5 +353,24 @@ public class Monster : MonoBehaviour
     {
         return Game.Instance.GetNearestFiredTreeInRange(this.transform.position, visualRange, out foodTarget);
     }
- 
+
+
+    public void JumpDone(MonsterBody body)
+    {
+        Debug.Log("OnJumpGround " + body.gameObject.name + "   " + body.bodyID);
+        if (body.bodyID != EBodyID.Zero)
+        {
+            return;
+        }
+        if (jumpRender.enabled == false)
+            jumpRender.enabled = true;
+        jumpEffectAnim.Play("HuiChen", 0, 0);
+    }
+
+    public  SpriteRenderer jumpRender;
+    public Animator jumpEffectAnim;
+
+   
+
+
 }

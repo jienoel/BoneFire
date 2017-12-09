@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class MonsterBody : MonoBehaviour
 {
-    public int BodyID;
+    public int bodyID;
     public Animator animator;
     public int colorIndex;
     // set by hitAndChangeColor, read by monster
     SpriteRenderer render;
     Vector3 lastPosition;
+    Monster monster;
 
     void Awake()
     {
-        Init();
+        EnableBody(colorIndex);
+        monster = GetComponentInParent<Monster>();
     }
 
     bool init;
@@ -45,8 +47,18 @@ public class MonsterBody : MonoBehaviour
     {
         if (lastPosition != transform.position)
         {
+           
             Game.FlipSprite(render, transform.position - lastPosition);
             lastPosition = transform.position;
+        }
+    }
+
+    void OnJumpGround()
+    {
+        if (bodyID == EBodyID.Zero)
+        {
+            Debug.Log("OnJumpGround " + this.gameObject.name);
+            monster.JumpDone(this);
         }
     }
 

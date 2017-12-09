@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HitAndChangeColor : MonoBehaviour {
-    private int colorIndex;
+    public int colorIndex;
     private Color[] color = { Color.red, Color.yellow, Color.cyan };
     private Renderer renderer;
 
     private void Start() {
         renderer = GetComponent<Renderer>();
+        renderer.material.color = color[colorIndex];
     }
 
     private void OnCollisionEnter(Collision collision) {

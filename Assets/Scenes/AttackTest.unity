@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 740d59df7b3165e4383f9bc2536a58bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorIndex: 0
 --- !u!54 &400389586
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -389,6 +390,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 901725271}
+  - component: {fileID: 901725272}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -413,6 +415,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &901725272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 901725270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf23b4493c5f2d44f95afb5dd75ca9fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterParts:
+  - {fileID: 400389585}
+  - {fileID: 1844347240}
+  - {fileID: 2104546955}
 --- !u!1 &1172891340
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,6 +935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7396876cbb3b2b4e90a6bbdb7c6e2f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  needUpdate: 0
   fireColorArea: {fileID: 1338384282}
   windMagnitude: 1
   degree: 45
@@ -1105,6 +1123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 740d59df7b3165e4383f9bc2536a58bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorIndex: 0
 --- !u!54 &1844347241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1313,6 +1332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 740d59df7b3165e4383f9bc2536a58bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorIndex: 1
 --- !u!54 &2104546956
 Rigidbody:
   m_ObjectHideFlags: 0

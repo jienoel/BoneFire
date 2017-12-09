@@ -29,6 +29,8 @@ public class Monster : MonoBehaviour
     public float waitCDMax = 30;
     public float stayCDWhenChaseBlock = 10;
     public Vector3 patrolPos;
+    //人物出现在怪物的视线范围
+    public SpriteRenderer hasPlayerRender;
 
     public void ResetBody()
     {

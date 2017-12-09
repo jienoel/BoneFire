@@ -17,6 +17,5 @@ public class HitAndChangeColor : MonoBehaviour {
             colorIndex = (colorIndex + 1) % 3;
             renderer.material.color = color[colorIndex];
         }
-        Destroy(collision.gameObject);
     }
 }

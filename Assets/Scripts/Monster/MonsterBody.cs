@@ -67,13 +67,16 @@ public class MonsterBody : MonoBehaviour
             Init();
         render.enabled = true;
         animator.enabled = true;
-        ChangeColor(colorID);
+        ChangeColor(colorID, false);
     }
 
-    public void ChangeColor(int colorID)
+    public void ChangeColor(int colorID, bool needFlash = true)
     {
         if (ColorTable.isColorValid(colorID))
         {
+            if (needFlash) {
+                StartCoroutine(HitAndFlash());
+            }
             animator.SetInteger(AnimatorParam.Color, colorID);
             Debug.Log("set color:" + colorID);
             colorIndex = colorID;
@@ -99,6 +102,15 @@ public class MonsterBody : MonoBehaviour
             color2 = (color2 + 1) % ColorTable.Max;
             render.color = color2 == ColorTable.Red ? Color.red : Color.green;
             changeColor2 = false;
+        }
+    }
+
+    private IEnumerator HitAndFlash() {
+        for (int i = 0; i < 3; i++) {
+            yield return new WaitForSeconds(0.3f);
+            render.enabled = false;
+            yield return new WaitForSeconds(0.1f);
+            render.enabled = true;
         }
     }
 

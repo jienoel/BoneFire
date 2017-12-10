@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -320,7 +321,13 @@ public class Shooter : MonoBehaviour,IChaseable
         animator.SetBool(AnimatorParam.BoolDie, true);
         StopMove();
         DisplayLine(false, Vector3.down);
+        //StartCoroutine(DieDone());
         GameSignals.InvokeAction(GameSignals.onPlayerDie);
+    }
+
+    private IEnumerator DieDone() {
+        yield return new WaitForSeconds(2.08f);
+        OnDieDone();
     }
 
     public void OnDieDone()

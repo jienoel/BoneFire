@@ -12,6 +12,7 @@ public class HitAndFire : MonoBehaviour, IChaseable
     public Animator fireAnimator;
     public SpriteRenderer fireRender;
     public bool isOnFire;
+    public bool isDead;
 
     private Coroutine burn_CO;
 

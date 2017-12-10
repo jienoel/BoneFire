@@ -223,7 +223,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1767277744118036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.76, y: 0.58, z: -33.2}
+  m_LocalPosition: {x: -19.7, y: 0.58, z: -39.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4657787640627652}
@@ -600,11 +600,13 @@ MonoBehaviour:
   status: 0
   catchDistance: 1.5
   visualRange: 10
+  foodVisualRange: 60
   waitCD: 0
   waitCDMax: 15
   stayCDWhenChaseBlock: 10
   patrolPos: {x: 0, y: 0, z: 0}
   hasPlayerRender: {fileID: 212133375207939290}
+  patrolRadius: 5
   animationLazy: 0
   jumpRender: {fileID: 212631311361635262}
   jumpEffectAnim: {fileID: 95272033016028470}

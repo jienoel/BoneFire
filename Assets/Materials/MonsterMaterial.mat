@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: MonserMaterial
+  m_Name: MonsterMaterial
   m_Shader: {fileID: 4800000, guid: 3ff9b6ba38687a140a197de711b5b873, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA PIXELSNAP_ON
   m_LightmapFlags: 4

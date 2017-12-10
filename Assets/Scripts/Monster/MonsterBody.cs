@@ -106,12 +106,9 @@ public class MonsterBody : MonoBehaviour
     }
 
     private IEnumerator HitAndFlash() {
-        for (int i = 0; i < 3; i++) {
-            yield return new WaitForSeconds(0.3f);
-            render.material.SetFloat("_FlashAmount", 0.75f);
-            yield return new WaitForSeconds(0.2f);
-            render.material.SetFloat("_FlashAmount", 0);
-        }
+        render.material.SetFloat("_FlashAmount", 0.1f);
+        yield return new WaitForSeconds(0.2f);
+        render.material.SetFloat("_FlashAmount", 0);
     }
 
 }

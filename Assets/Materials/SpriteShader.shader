@@ -5,7 +5,7 @@
          [PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
          _Color ("Tint", Color) = (1,1,1,1)
          _FlashColor ("Flash Color", Color) = (1,1,1,1)
-         _FlashAmount ("Flash Amount",Range(0.0,1.0)) = 0.0
+         _FlashAmount ("Flash Amount",Range(0.0, 1.0)) = 0.0
          [MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
      }
  
@@ -70,7 +70,7 @@
              fixed4 frag(v2f IN) : COLOR
              {
                  fixed4 c = tex2D(_MainTex, IN.texcoord) * IN.color;
-                 c.rgb = lerp(c.rgb,_FlashColor.rgb,_FlashAmount);
+                 c.rgb = c.rgb + _FlashAmount;
                  c.rgb *= c.a;
              
                  return c;

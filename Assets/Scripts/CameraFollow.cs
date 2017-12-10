@@ -33,6 +33,6 @@ public class CameraFollow : MonoBehaviour {
         position.x = Mathf.Clamp(position.x, xMin, xMax);
         position.z = Mathf.Clamp(position.z, yMin, yMax);
         position.y = 6.9f;
-        transform.position = Vector3.Lerp(transform.position, position, 2 * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime);
 	}
 }

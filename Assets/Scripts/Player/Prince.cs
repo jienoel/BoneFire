@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Prince : MonoBehaviour
 {
-
+    public bool isSafe = false;
     public SpriteRenderer render;
     public Animator animator;
     public GameObject target;
@@ -13,6 +13,7 @@ public class Prince : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (isSafe) return;
         if (other.tag == "Player")
         {
             target = Game.Instance.player.gameObject;

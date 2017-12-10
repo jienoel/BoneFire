@@ -1,22 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Prince : MonoBehaviour
 {
 
     public SpriteRenderer render;
     public Animator animator;
+    public GameObject target;
+    public NavMeshAgent agent;
 
-    // Use this for initialization
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-		
+        if (other.tag == "Player")
+        {
+            target = Game.Instance.player.gameObject;
+        }
     }
-	
-    // Update is called once per frame
+
     void Update()
     {
-		
+        if (target != null)
+        {
+            agent.SetDestination(target.transform.position);
+        }
+        animator.SetFloat(AnimatorParam.FloatSpeed, agent.speed);
     }
+
+
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
@@ -59,6 +60,7 @@ public class Game : MonoBehaviour
     public Shooter player;
     public List<Transform> firedTrees = new List<Transform>();
     // Use this for initialization
+    public Canvas ui;
 
     void Awake()
     {
@@ -87,10 +89,30 @@ public class Game : MonoBehaviour
         GameSignals.onTreeDestroy -= OnTreeDestroyed;
     }
 
+    bool princessInSafeArea;
+    bool finishDiamond;
     // Update is called once per frame
     void Update()
     {
 		
+    }
+
+    bool CheckGameOver()
+    {
+        return princessInSafeArea && finishDiamond;
+    }
+
+    void LateUpdate()
+    {
+        if (CheckGameOver())
+        {
+            GameOver();
+        }
+    }
+
+    void GameOver()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(ConstString.StartScene);
     }
 
     void OnTreeFired(Transform tree)
@@ -131,11 +153,6 @@ public class Game : MonoBehaviour
     }
 
     void OnFirePileExtinguish()
-    {
-        
-    }
-
-    void GameOver()
     {
         
     }

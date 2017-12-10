@@ -14,6 +14,8 @@ public static class GameSignals
     public static Action<int> onPutDiamond;
     public static Action<int> onPlayerHitDiamond;
     public static Action<string> onTrigeSafeArea;
+    public static Action onFinishDiamond;
+    public static Action onPrinceInSafeArea;
 
     public static void InvokeAction(Action action)
     {

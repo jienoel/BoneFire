@@ -41,6 +41,16 @@ public class AnimatorParam
     public const string triggerAttack = "Attack";
 
     public const string BoolHasAtkTarget = "HasAtkTarget";
+
+   
+
+}
+
+public class ConstString
+{
+    public const string StartScene = "Start";
+
+    public const string Master = "Master";
 }
 
 public enum AnimatorParamType

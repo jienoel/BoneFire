@@ -55,17 +55,41 @@ public class CampFire : MonoBehaviour
         if (color == ColorTable.Blue && !blueDiamondRender2.enabled)
         {
             blueDiamondRender2.enabled = true;
+            diamondFlag = diamondFlag | diamondFlag << ColorTable.Blue;
         }
         else if (color == ColorTable.Yellow && !yellowDiamondRender3.enabled)
         {
             yellowDiamondRender3.enabled = true;
+            diamondFlag = diamondFlag | diamondFlag << ColorTable.Yellow;
         }
         else if (color == ColorTable.Red && !redDiamondRender.enabled)
         {
             redDiamondRender.enabled = true;
-
+            diamondFlag = diamondFlag | diamondFlag << ColorTable.Red;
         }
+
     }
 
+    int _diamondFlag;
+
+    public int diamondFlag
+    {
+        get
+        {
+            return _diamondFlag;
+        }
+        set
+        {
+            if (_diamondFlag != value)
+            {
+                if (value == 7)
+                {
+                    Debug.Log("宝石收集完毕");
+                    GameSignals.InvokeAction(GameSignals.onFinishDiamond);
+                }
+            }
+            _diamondFlag = value;
+        }
+    }
 
 }

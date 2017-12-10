@@ -40,7 +40,7 @@ public class Prince : MonoBehaviour
 
     void Update()
     {
-        if (target != null)
+        if (!isSafe && target != null)
         {
             agent.SetDestination(target.transform.position);
         }

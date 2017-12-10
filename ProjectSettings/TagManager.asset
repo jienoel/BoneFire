@@ -9,6 +9,7 @@ TagManager:
   - Tree
   - Monster
   - PlayerStartPos
+  - Prince
   layers:
   - Default
   - TransparentFX

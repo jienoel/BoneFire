@@ -10,8 +10,24 @@ public class CampFireTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player") {
             Shooter shooter = other.gameObject.GetComponentInParent<Shooter>();
             shooter.inSafeArea = true;
+            if (shooter.diamondColor >= 0) {
+                GameSignals.onPutDiamond(shooter.diamondColor);
+            }
         }
+        if (other.gameObject.tag == "Prince") {
+            Debug.Log("Prince Go Home");
+        }
+
         Debug.Log("Enter campFire trigger " + other.gameObject.tag + "  " + other.gameObject.name);
+    }
+
+    private void OnTriggerStay(Collider other) {
+        if (other.gameObject.tag == "Player") {
+            Shooter shooter = other.gameObject.GetComponentInParent<Shooter>();
+            if (shooter.diamondColor >= 0) {
+                GameSignals.onPutDiamond(shooter.diamondColor);
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other) {

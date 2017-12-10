@@ -7,6 +7,7 @@ public class Shooter : MonoBehaviour,IChaseable
 {
     [Header("Input")]
     public float thresholdTime = 0.1f;
+    public float thresholdDistance = 0.5f;
     // 防误触，每次攻击要按下一定时间
     public LayerMask groundLayer;
 
@@ -136,7 +137,7 @@ public class Shooter : MonoBehaviour,IChaseable
         }
         if (!isClicked)
         {
-           
+            animator.ResetTrigger(AnimatorParam.triggerAttack);
             animator.SetBool(AnimatorParam.BoolAttackPre, true);
         }
         Debug.Log("On Mouse Down " + Time.time); 
@@ -155,6 +156,7 @@ public class Shooter : MonoBehaviour,IChaseable
             FlipSprite(transform.position - lastPosition);
             lastPosition = transform.position;
         }
+
     }
 
     void FlipSprite(Vector3 forward)
@@ -226,8 +228,10 @@ public class Shooter : MonoBehaviour,IChaseable
                 Move();
             }
         }
-        animator.SetFloat(AnimatorParam.FloatSpeed, agent.velocity.magnitude);
-
+        if (Vector3.Distance(lastPosition, transform.position) >= thresholdDistance)
+            animator.SetFloat(AnimatorParam.FloatSpeed, agent.velocity.magnitude);
+        else
+            animator.SetFloat(AnimatorParam.FloatSpeed, 0);
         Test();
     }
 
@@ -325,6 +329,8 @@ public class Shooter : MonoBehaviour,IChaseable
     {
         hp = hpMax;
         this.transform.position = startPos.position;
+        this.lastPosition = startPos.position;
+        animator.ResetTrigger(AnimatorParam.triggerAttack);
         animator.SetBool(AnimatorParam.BoolDie, false);
         render.enabled = true;
     }

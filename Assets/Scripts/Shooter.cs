@@ -7,7 +7,7 @@ public class Shooter : MonoBehaviour,IChaseable
 {
     [Header("Input")]
     public float thresholdTime = 0.1f;
-    public float thresholdDistance = 0.5f;
+    public float thresholdDistance = 0.01f;
     // 防误触，每次攻击要按下一定时间
     public LayerMask groundLayer;
 

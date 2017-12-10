@@ -337,7 +337,7 @@ LineRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 0.7843138, g: 0.7843138, b: 0.43529415, a: 0.2509804}
-      key1: {r: 0.70980394, g: 0.30980393, b: 0.37647063, a: 0.2509804}
+      key1: {r: 0.70980394, g: 0.30980393, b: 0.37647063, a: 0.5019608}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -353,8 +353,8 @@ LineRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
+      atime1: 6554
+      atime2: 65535
       atime3: 0
       atime4: 0
       atime5: 0
@@ -362,11 +362,11 @@ LineRenderer:
       atime7: 0
       m_Mode: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 3
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0

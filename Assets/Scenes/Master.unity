@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465934, g: 0.49642956, b: 0.5748249, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -27583,6 +27583,11 @@ Prefab:
       propertyPath: m_Name
       value: Monster (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114147090893816358, guid: 313e375a53d90db4cb96620ea674e078,
+        type: 2}
+      propertyPath: foodVisualRange
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 313e375a53d90db4cb96620ea674e078, type: 2}
   m_IsPrefabParent: 0
@@ -31460,6 +31465,11 @@ Prefab:
     - target: {fileID: 1767277744118036, guid: 313e375a53d90db4cb96620ea674e078, type: 2}
       propertyPath: m_Name
       value: Monster (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114147090893816358, guid: 313e375a53d90db4cb96620ea674e078,
+        type: 2}
+      propertyPath: foodVisualRange
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 313e375a53d90db4cb96620ea674e078, type: 2}

@@ -14,6 +14,10 @@ public class CampFireTrigger : MonoBehaviour
                 GameSignals.onPutDiamond(shooter.diamondColor);
             }
         }
+        if (other.gameObject.tag == "Prince") {
+            Debug.Log("Prince Go Home");
+        }
+
         Debug.Log("Enter campFire trigger " + other.gameObject.tag + "  " + other.gameObject.name);
     }
 

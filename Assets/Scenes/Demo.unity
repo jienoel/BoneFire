@@ -16035,57 +16035,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 212235552415940634, guid: 6b12c98931c63447091e21d81a9eea20,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1331713577
-      objectReference: {fileID: 0}
-    - target: {fileID: 212235552415940634, guid: 6b12c98931c63447091e21d81a9eea20,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212235552415940634, guid: 6b12c98931c63447091e21d81a9eea20,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 23750878742513128, guid: 6b12c98931c63447091e21d81a9eea20,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212235552415940634, guid: 6b12c98931c63447091e21d81a9eea20,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: d39c57043e6e648959ff9f0d242d8cfb,
-        type: 3}
-    - target: {fileID: 212235552415940634, guid: 6b12c98931c63447091e21d81a9eea20,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 1.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 212235552415940634, guid: 6b12c98931c63447091e21d81a9eea20,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 212235552415940634, guid: 6b12c98931c63447091e21d81a9eea20,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114072169576370778, guid: 6b12c98931c63447091e21d81a9eea20,
-        type: 2}
-      propertyPath: render
-      value: 
-      objectReference: {fileID: 1723649827}
-    - target: {fileID: 114072169576370778, guid: 6b12c98931c63447091e21d81a9eea20,
-        type: 2}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 1723649828}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b12c98931c63447091e21d81a9eea20, type: 2}
   m_IsPrefabParent: 0
@@ -25202,16 +25151,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1723084890}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!212 &1723649827 stripped
-SpriteRenderer:
-  m_PrefabParentObject: {fileID: 212235552415940634, guid: 6b12c98931c63447091e21d81a9eea20,
-    type: 2}
-  m_PrefabInternal: {fileID: 1081910662}
---- !u!95 &1723649828 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95987006049348488, guid: 6b12c98931c63447091e21d81a9eea20,
-    type: 2}
-  m_PrefabInternal: {fileID: 1081910662}
 --- !u!1 &1726697446
 GameObject:
   m_ObjectHideFlags: 0

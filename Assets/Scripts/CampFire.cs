@@ -55,17 +55,17 @@ public class CampFire : MonoBehaviour
         if (color == ColorTable.Blue && !blueDiamondRender2.enabled)
         {
             blueDiamondRender2.enabled = true;
-            diamondFlag = diamondFlag | diamondFlag << ColorTable.Blue;
+            diamondFlag = diamondFlag | 1 << ColorTable.Blue;
         }
         else if (color == ColorTable.Yellow && !yellowDiamondRender3.enabled)
         {
             yellowDiamondRender3.enabled = true;
-            diamondFlag = diamondFlag | diamondFlag << ColorTable.Yellow;
+            diamondFlag = diamondFlag | 1 << ColorTable.Yellow;
         }
         else if (color == ColorTable.Red && !redDiamondRender.enabled)
         {
             redDiamondRender.enabled = true;
-            diamondFlag = diamondFlag | diamondFlag << ColorTable.Red;
+            diamondFlag = diamondFlag | 1 << ColorTable.Red;
         }
 
     }

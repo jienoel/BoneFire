@@ -52,8 +52,11 @@ public class HitAndFire : MonoBehaviour, IChaseable
         treeRender.enabled = false;
         fireRender.enabled = false;
         ashRender.enabled = true;
+        isDestroyed = true;
         //Destroy(transform.parent.gameObject);
     }
+
+    public bool isDestroyed;
 
     public void Arrived()
     {
@@ -65,7 +68,8 @@ public class HitAndFire : MonoBehaviour, IChaseable
         burn_CO = StartCoroutine(Rescue());
     }
 
-    private IEnumerator HitAndFlash() {
+    private IEnumerator HitAndFlash()
+    {
         treeRender.material.SetFloat("_FlashAmount", 0.05f);
         yield return new WaitForSeconds(0.2f);
         treeRender.material.SetFloat("_FlashAmount", 0);

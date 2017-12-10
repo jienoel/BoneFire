@@ -26,6 +26,7 @@ public class Monster : MonoBehaviour
     public MonsterStatus status;
     public float catchDistance;
     public float visualRange = 10;
+    public float foodVisualRange = 60;
     public float waitCD = 0;
     public float waitCDMax = 30;
     public float stayCDWhenChaseBlock = 10;
@@ -358,12 +359,21 @@ public class Monster : MonoBehaviour
         {
             return true;
         }
+        HitAndFire fireTree = foodTarget.gameObject.GetComponentInChildren<HitAndFire>();
+        if (fireTree != null)
+        {
+            return fireTree.isDestroyed;
+        }
+        else
+        {
+            Debug.LogError("没有找到HitAndFire");
+        }
         return false;
     }
 
     bool HasFoodTarget()
     {
-        return Game.Instance.GetNearestFiredTreeInRange(this.transform.position, visualRange, out foodTarget);
+        return Game.Instance.GetNearestFiredTreeInRange(this.transform.position, foodVisualRange, out foodTarget);
     }
 
 

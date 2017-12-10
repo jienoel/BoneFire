@@ -7,7 +7,8 @@ public class Game : MonoBehaviour
 {
     public static  void FlipSprite(SpriteRenderer render, Vector3 forward)
     {
-        if (forward.magnitude < 0.01f) return;
+        if (forward.magnitude < 0.01f)
+            return;
         Vector3 v = Vector3.Project(forward, Vector3.right);
         if (render.flipX != (v.x < 0))
             render.flipX = v.x < 0;
@@ -67,7 +68,7 @@ public class Game : MonoBehaviour
         {
             Debug.LogError("player is null!");
         }
-//        Debug.LogError(this.name);
+        Debug.LogError(this.name);
     }
 
     void Start()

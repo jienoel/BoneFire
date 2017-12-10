@@ -244,13 +244,14 @@ public class Monster : MonoBehaviour
             return;
         }
         agent.SetDestination(Game.Instance.player.transform.position);
+        ChaseTargetOrFood(Game.Instance.player.gameObject);
     }
 
     void EnterDieStatus()
     {
         OnStatusChange(MonsterStatus.Die);
         Debug.Log(string.Format("{0} died.", name));
-        Instantiate(diamond, transform.position, Quaternion.identity);
+        Instantiate(diamond, transform.position, Quaternion.identity).GetComponent<Diamond>().SetColor(this.monsterBodies[0].colorIndex);
         Destroy(gameObject);
         return;
     }
@@ -302,18 +303,23 @@ public class Monster : MonoBehaviour
             return;
         }
         agent.SetDestination(foodTarget.transform.position);
-        Debug.Log(Vector3.Distance(transform.position, foodTarget.transform.position));
-        if (Vector3.Distance(transform.position, foodTarget.transform.position) < catchDistance)
+        ChaseTargetOrFood(foodTarget.gameObject);
+    }
+
+    void ChaseTargetOrFood(GameObject chaseTarget)
+    {
+//        Debug.Log(Vector3.Distance(transform.position, chaseTarget.transform.position));
+        if (Vector3.Distance(transform.position, chaseTarget.transform.position) < catchDistance)
         {
-            Debug.Log("Arrive");
-            foodTarget.GetComponent<IChaseable>().Arrived();
-            foodTarget = null;
+            Debug.Log("Arrive Chase Target");
+            chaseTarget.GetComponent<IChaseable>().Arrived();
+            chaseTarget = null;
         }
     }
 
     bool HasPlayerToChase()
     {
-        return IsPlayerInVisualRange() && !IsPlayerInSafeArea();
+        return IsPlayerInVisualRange() && !IsPlayerInSafeArea() && !Game.Instance.player.isDie;
     }
 
     public bool InPlayerAttackRange()
@@ -357,7 +363,7 @@ public class Monster : MonoBehaviour
 
     public void JumpDone(MonsterBody body)
     {
-        Debug.Log("OnJumpGround " + body.gameObject.name + "   " + body.bodyID);
+//        Debug.Log("OnJumpGround " + body.gameObject.name + "   " + body.bodyID);
         if (body.bodyID != EBodyID.Zero)
         {
             return;

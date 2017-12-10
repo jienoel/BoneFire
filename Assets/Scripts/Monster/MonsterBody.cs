@@ -48,7 +48,7 @@ public class MonsterBody : MonoBehaviour
         if (lastPosition != transform.position)
         {
            
-            Game.FlipSprite(render, transform.position - lastPosition);
+            Game.FlipSprite(render, -transform.position + lastPosition);
             lastPosition = transform.position;
         }
     }
@@ -57,7 +57,6 @@ public class MonsterBody : MonoBehaviour
     {
         if (bodyID == EBodyID.Zero)
         {
-            Debug.Log("OnJumpGround " + this.gameObject.name);
             monster.JumpDone(this);
         }
     }
@@ -81,10 +80,10 @@ public class MonsterBody : MonoBehaviour
         }
     }
 
-    public  bool changeColor1;
-    public bool changeColor2;
-    public int color1;
-    public  int color2;
+    bool changeColor1;
+    bool changeColor2;
+    int color1;
+    int color2;
 
     void Update()
     {

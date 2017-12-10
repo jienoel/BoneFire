@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class Shooter : MonoBehaviour
+public class Shooter : MonoBehaviour,IChaseable
 {
     [Header("Input")]
     public float thresholdTime = 0.1f;
@@ -117,6 +117,8 @@ public class Shooter : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (isDie)
+            return;
         if (!isClicked)
         {
            
@@ -129,6 +131,8 @@ public class Shooter : MonoBehaviour
 
     void LateUpdate()
     {
+        if (isDie)
+            return;
         if (lastPosition != transform.position)
         {
             FlipSprite(transform.position - lastPosition);
@@ -146,6 +150,8 @@ public class Shooter : MonoBehaviour
 
     private void Update()
     {
+        if (isDie)
+            return;
         if (Input.GetKeyDown(KeyCode.A))
         {
             isClicked = false;
@@ -207,7 +213,8 @@ public class Shooter : MonoBehaviour
         var dest = GetGroundPoint();
         if (dest != Vector3.down)
         {
-            agent.isStopped = false;
+            if (agent.isStopped)
+                agent.isStopped = false;
             agent.SetDestination(dest);
         }
     }
@@ -270,10 +277,18 @@ public class Shooter : MonoBehaviour
 
     void OnPlayerDie()
     {
+        Debug.Log("player die");
         hp = 0;
         animator.SetBool(AnimatorParam.BoolDie, true);
         StopMove();
         GameSignals.InvokeAction(GameSignals.onPlayerDie);
+    }
+
+    public void OnDieDone()
+    {
+        render.enabled = false;
+        animator.ResetTrigger(AnimatorParam.TriggerHurt);
+        RelivePlayer();
     }
 
     public void RelivePlayer()
@@ -281,8 +296,14 @@ public class Shooter : MonoBehaviour
         hp = hpMax;
         this.transform.position = startPos.position;
         animator.SetBool(AnimatorParam.BoolDie, false);
+        render.enabled = true;
     }
 
+    public void Arrived()
+    {
+        Debug.Log("Monster Attack  " + damage);
+        OnPlayerWasAttack(damage);
+    }
 
     void Test()
     {

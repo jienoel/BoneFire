@@ -66,7 +66,7 @@ public class HitAndFire : MonoBehaviour, IChaseable
     }
 
     private IEnumerator HitAndFlash() {
-        treeRender.material.SetFloat("_FlashAmount", 0.1f);
+        treeRender.material.SetFloat("_FlashAmount", 0.05f);
         yield return new WaitForSeconds(0.2f);
         treeRender.material.SetFloat("_FlashAmount", 0);
     }

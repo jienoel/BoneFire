@@ -33786,6 +33786,16 @@ Prefab:
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 120820152235968406, guid: b15074d917d9e6d439c6a297022b4a53,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1331713577
+      objectReference: {fileID: 0}
+    - target: {fileID: 120820152235968406, guid: b15074d917d9e6d439c6a297022b4a53,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b15074d917d9e6d439c6a297022b4a53, type: 2}
   m_IsPrefabParent: 0

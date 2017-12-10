@@ -15,6 +15,10 @@ public class CampFireTrigger : MonoBehaviour
             }
         }
         if (other.gameObject.tag == "Prince") {
+            other.GetComponent<Prince>().target = null;
+            other.GetComponent<Prince>().isSafe = true;
+            other.GetComponent<Prince>().agent.Stop();
+            other.transform.position = transform.position;
             Debug.Log("Prince Go Home");
         }
 

@@ -48,7 +48,10 @@ public class HitAndFire : MonoBehaviour, IChaseable
     void OnTreeDestroy()
     {
         GameSignals.InvokeAction(GameSignals.onTreeDestroy, tree);
-        Destroy(transform.parent.gameObject);
+        treeRender.enabled = false;
+        fireRender.enabled = false;
+        ashRender.enabled = true;
+        //Destroy(transform.parent.gameObject);
     }
 
     public void Arrived()

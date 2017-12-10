@@ -315,6 +315,7 @@ public class Shooter : MonoBehaviour,IChaseable
         hp = 0;
         animator.SetBool(AnimatorParam.BoolDie, true);
         StopMove();
+        DisplayLine(false, Vector3.down);
         GameSignals.InvokeAction(GameSignals.onPlayerDie);
     }
 

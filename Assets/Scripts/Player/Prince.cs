@@ -10,13 +10,31 @@ public class Prince : MonoBehaviour
     public Animator animator;
     public GameObject target;
     public NavMeshAgent agent;
+    Vector3 lastPosition;
+    public float thresholdDistance = 0.01f;
+
+    void Awake()
+    {
+        lastPosition = transform.position;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isSafe) return;
+        if (isSafe)
+            return;
         if (other.tag == "Player")
         {
             target = Game.Instance.player.gameObject;
+        }
+    }
+
+    void LateUpdate()
+    {
+        if (lastPosition != transform.position)
+        {
+            if (agent.speed > 0)
+                Game.FlipSprite(render, transform.position - lastPosition);
+            lastPosition = transform.position;
         }
     }
 
@@ -26,7 +44,10 @@ public class Prince : MonoBehaviour
         {
             agent.SetDestination(target.transform.position);
         }
-        animator.SetFloat(AnimatorParam.FloatSpeed, agent.speed);
+        if (Vector3.Distance(lastPosition, transform.position) >= thresholdDistance)
+            animator.SetFloat(AnimatorParam.FloatSpeed, agent.velocity.magnitude);
+        else
+            animator.SetFloat(AnimatorParam.FloatSpeed, 0);
     }
 
 

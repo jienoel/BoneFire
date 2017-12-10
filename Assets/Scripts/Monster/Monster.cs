@@ -32,6 +32,7 @@ public class Monster : MonoBehaviour
     public Vector3 patrolPos;
     //人物出现在怪物的视线范围
     public SpriteRenderer hasPlayerRender;
+    public int patrolRadius = 5;
 
     public void ResetBody()
     {
@@ -243,6 +244,11 @@ public class Monster : MonoBehaviour
             waitCD = waitCDMax - stayCDWhenChaseBlock;
             return;
         }
+        if (!IsPlayerInVisualRange())
+        {
+            OnStatusChange(MonsterStatus.Wait);
+            return;
+        }
         agent.SetDestination(Game.Instance.player.transform.position);
         ChaseTargetOrFood(Game.Instance.player.gameObject);
     }
@@ -264,8 +270,9 @@ public class Monster : MonoBehaviour
             ////TODO @zhuchaojie  离开玩家攻击距离的位置移动,设置PatrolPos
         }
         var degree = Random.Range(0, 360);
-        patrolPos = transform.position + new Vector3(Mathf.Sin(degree), 0, Mathf.Cos(degree)) * 10;
+        patrolPos = transform.position + new Vector3(Mathf.Sin(degree), 0, Mathf.Cos(degree)) * patrolRadius;
     }
+
 
     void OnPatrolStatus()
     {

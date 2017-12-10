@@ -23,7 +23,7 @@ public class Diamond : MonoBehaviour
 //            GetComponent<Rigidbody>().useGravity = false;
 //            GetComponent<Rigidbody>().isKinematic = true;
             GameSignals.InvokeAction(GameSignals.onPlayerHitDiamond, colorID);
-            GameObject.Destroy(this);
+            GameObject.Destroy(gameObject);
            
         }
     }

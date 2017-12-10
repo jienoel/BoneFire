@@ -34,7 +34,7 @@ public class Shooter : MonoBehaviour,IChaseable
     public int hpMax = 100;
     public bool inSafeArea;
 
-    int _diamondColor;
+    int _diamondColor = -1;
 
     public int diamondColor
     {

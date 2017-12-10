@@ -251,7 +251,7 @@ public class Monster : MonoBehaviour
     {
         OnStatusChange(MonsterStatus.Die);
         Debug.Log(string.Format("{0} died.", name));
-        Instantiate(diamond, transform.position, Quaternion.identity).GetComponent<Diamond>().SetColor(this.monsterBodies[0].colorIndex);
+        Instantiate(diamond, transform.position, Quaternion.identity).GetComponentInChildren<Diamond>().SetColor(this.monsterBodies[0].colorIndex);
         Destroy(gameObject);
         return;
     }

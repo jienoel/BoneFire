@@ -10529,16 +10529,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 212205185614668950, guid: 313e375a53d90db4cb96620ea674e078,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f779d823a85c18143be9d5975b874eca, type: 2}
-    - target: {fileID: 114147090893816358, guid: 313e375a53d90db4cb96620ea674e078,
-        type: 2}
-      propertyPath: visualRange
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 313e375a53d90db4cb96620ea674e078, type: 2}
   m_IsPrefabParent: 0
@@ -25736,6 +25726,11 @@ Prefab:
       propertyPath: m_Name
       value: Monster (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114147090893816358, guid: 313e375a53d90db4cb96620ea674e078,
+        type: 2}
+      propertyPath: visualRange
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 313e375a53d90db4cb96620ea674e078, type: 2}
   m_IsPrefabParent: 0
@@ -29486,6 +29481,11 @@ Prefab:
     - target: {fileID: 1767277744118036, guid: 313e375a53d90db4cb96620ea674e078, type: 2}
       propertyPath: m_Name
       value: Monster (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114147090893816358, guid: 313e375a53d90db4cb96620ea674e078,
+        type: 2}
+      propertyPath: visualRange
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 313e375a53d90db4cb96620ea674e078, type: 2}
@@ -33882,16 +33882,6 @@ Prefab:
     - target: {fileID: 1058953187702412, guid: b15074d917d9e6d439c6a297022b4a53, type: 2}
       propertyPath: m_Name
       value: Player (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 120820152235968406, guid: b15074d917d9e6d439c6a297022b4a53,
-        type: 2}
-      propertyPath: m_SortingLayerID
-      value: 1331713577
-      objectReference: {fileID: 0}
-    - target: {fileID: 120820152235968406, guid: b15074d917d9e6d439c6a297022b4a53,
-        type: 2}
-      propertyPath: m_SortingLayer
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b15074d917d9e6d439c6a297022b4a53, type: 2}

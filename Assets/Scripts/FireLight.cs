@@ -13,7 +13,8 @@ public class FireLight : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        Color cc = new Color(1, 1, 1, 1 - Mathf.PingPong(0.2f * Time.time, 0.25f));
+        Color cc = new Color(1, 1, 1, 1 - Mathf.PingPong(0.4f * Time.time, 0.25f));
+        transform.localScale = (1 - Mathf.PingPong(0.02f * Time.time, 0.03f)) * Vector3.one;
         sr.color = cc;
 	}
 }

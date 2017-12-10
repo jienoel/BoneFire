@@ -29,6 +29,7 @@ public class Shooter : MonoBehaviour,IChaseable
     private NavMeshAgent agent;
     public Animator animator;
     public SpriteRenderer render;
+    OnPlayerDieDone animationEventHandle;
 
     public int hp;
     public int hpMax = 100;
@@ -59,6 +60,9 @@ public class Shooter : MonoBehaviour,IChaseable
         }
     }
 
+    public float attackCD;
+    public float attackMaxCD = 5;
+    public bool isAttcking;
     public SpriteRenderer diamondRender;
     public Sprite[] diamondSprites;
 
@@ -79,6 +83,7 @@ public class Shooter : MonoBehaviour,IChaseable
     {
         agent = GetComponent<NavMeshAgent>();
         startPos = GameObject.FindGameObjectWithTag("PlayerStartPos").transform;
+        animationEventHandle = GetComponentInChildren<OnPlayerDieDone>();
     }
 
     private void Start()
@@ -119,12 +124,24 @@ public class Shooter : MonoBehaviour,IChaseable
     {
         if (isDie)
             return;
+        if (isAttcking)
+        {
+            Debug.Log("攻击冷却中");
+            return;
+        }
+        if (animationEventHandle.isPlayAttack)
+        {
+            Debug.Log("is play attack animation");
+            return;
+        }
         if (!isClicked)
         {
            
-            animator.SetTrigger(AnimatorParam.TrigerAttackPre);
+            animator.SetBool(AnimatorParam.BoolAttackPre, true);
         }
+        Debug.Log("On Mouse Down " + Time.time); 
         isClicked = true;
+        StopMove();
         clickTime = Time.time;
         clickPos = GetGroundPoint();
     }
@@ -155,12 +172,18 @@ public class Shooter : MonoBehaviour,IChaseable
         if (Input.GetKeyDown(KeyCode.A))
         {
             isClicked = false;
-            animator.ResetTrigger(AnimatorParam.TrigerAttackPre);
+            animator.SetBool(AnimatorParam.BoolAttackPre, false);
+        }
+        if (isAttcking)
+        {
+            attackCD += Time.deltaTime;
+            if (attackCD >= attackMaxCD)
+            {
+                isAttcking = false;
+            }
         }
         if (isClicked)
         {
-            StopMove();
-          
             var currPoint = GetGroundPoint();
             if (clickPos != Vector3.down && currPoint != Vector3.down)
             {
@@ -171,6 +194,7 @@ public class Shooter : MonoBehaviour,IChaseable
             DisplayLine(true, currDir);
             if (Input.GetMouseButtonUp(0))
             {
+                Debug.Log(" Mouse Button Up " + Time.time + "  " + clickTime);
                 var releaseTime = Time.time;
                 if (releaseTime - clickTime < thresholdTime)
                 {
@@ -179,14 +203,19 @@ public class Shooter : MonoBehaviour,IChaseable
                 {
                     if (clickPos != Vector3.down && currPoint != Vector3.down)
                     {
-                        animator.SetTrigger(AnimatorParam.TriggerAttack);
+                       
+                        isAttcking = true;
+                        Debug.Log("set animator bool attack true");
+                        animator.SetTrigger(AnimatorParam.triggerAttack);
                         var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
                         bullet.GetComponent<Rigidbody>().AddForce(currDir * force, ForceMode.Impulse);
                         DisplayLine(false, currDir);
+                       
                     }
                 }
                 isClicked = false;
-                animator.ResetTrigger(AnimatorParam.TrigerAttackPre);
+                clickTime = Time.time;
+                animator.SetBool(AnimatorParam.BoolAttackPre, false);
                 transform.rotation = Quaternion.identity;
             }
         }
@@ -266,6 +295,7 @@ public class Shooter : MonoBehaviour,IChaseable
         if (damage <= 0)
             return;
         isClicked = false;
+        animator.ResetTrigger(AnimatorParam.triggerAttack);
         animator.SetTrigger(AnimatorParam.TriggerHurt);
         hp -= damage;
         if (hp <= 0)

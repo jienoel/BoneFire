@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29367790c57d0f841918fcbc83e94169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thresholdTime: 0.01
+  thresholdTime: 0.1
   groundLayer:
     serializedVersion: 2
     m_Bits: 256

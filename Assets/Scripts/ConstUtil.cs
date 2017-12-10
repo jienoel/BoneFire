@@ -36,9 +36,9 @@ public class AnimatorParam
 
     public const string TriggerHurt = "Hurt";
 
-    public const string TrigerAttackPre = "AttackPre";
+    public const string BoolAttackPre = "AttackPre";
 
-    public const string TriggerAttack = "Attack";
+    public const string triggerAttack = "Attack";
 
     public const string BoolHasAtkTarget = "HasAtkTarget";
 }

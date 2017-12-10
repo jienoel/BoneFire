@@ -600,6 +600,7 @@ MonoBehaviour:
   status: 0
   catchDistance: 1.5
   visualRange: 7
+  foodVisualRange: 60
   waitCD: 0
   waitCDMax: 15
   stayCDWhenChaseBlock: 10

@@ -270,8 +270,11 @@ public class Monster : MonoBehaviour
         {
             ////TODO @zhuchaojie  离开玩家攻击距离的位置移动,设置PatrolPos
         }
-        var degree = Random.Range(0, 360);
-        patrolPos = transform.position + new Vector3(Mathf.Sin(degree), 0, Mathf.Cos(degree)) * patrolRadius;
+        do {
+            var degree = Random.Range(0, 360);
+            patrolPos = transform.position + new Vector3(Mathf.Sin(degree), 0, Mathf.Cos(degree)) * patrolRadius;
+        }
+        while (patrolPos.x < -40 || patrolPos.x > -10 || patrolPos.z < -40 || patrolPos.z > 30);
     }
 
 

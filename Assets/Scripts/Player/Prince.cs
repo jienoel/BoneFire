@@ -40,7 +40,12 @@ public class Prince : MonoBehaviour
 
     void Update()
     {
-        if (!isSafe && target != null)
+        if (isSafe)
+        {
+            animator.SetFloat(AnimatorParam.FloatSpeed, 0);
+            return;
+        }
+        if (target != null)
         {
             agent.SetDestination(target.transform.position);
         }

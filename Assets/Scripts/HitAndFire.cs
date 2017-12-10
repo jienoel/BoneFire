@@ -24,6 +24,7 @@ public class HitAndFire : MonoBehaviour, IChaseable
             {
                 isOnFire = true;
                 GameSignals.InvokeAction(GameSignals.onTreeFired, tree);
+                StartCoroutine(HitAndFlash());
                 burn_CO = StartCoroutine(Burning());
             }
         }
@@ -63,4 +64,14 @@ public class HitAndFire : MonoBehaviour, IChaseable
         }
         burn_CO = StartCoroutine(Rescue());
     }
+
+    private IEnumerator HitAndFlash() {
+        for (int i = 0; i < 3; i++) {
+            yield return new WaitForSeconds(0.3f);
+            treeRender.material.SetFloat("_FlashAmount", 0.75f);
+            yield return new WaitForSeconds(0.2f);
+            treeRender.material.SetFloat("_FlashAmount", 0);
+        }
+    }
+
 }

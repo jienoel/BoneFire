@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -284,7 +285,9 @@ public class Shooter : MonoBehaviour,IChaseable
                 vel += Physics.gravity * Time.fixedDeltaTime;
                 positions[i] = startPos;
             }
-            hint.transform.position = positions[positions.Length - 1];
+            if (count > 0) {
+                hint.transform.position = positions[positions.Length - 1];
+            }
             //line.material.mainTextureScale = new Vector2(count / 4f, 1);
             line.positionCount = count;
             line.SetPositions(positions);
@@ -320,7 +323,13 @@ public class Shooter : MonoBehaviour,IChaseable
         animator.SetBool(AnimatorParam.BoolDie, true);
         StopMove();
         DisplayLine(false, Vector3.down);
+        //StartCoroutine(DieDone());
         GameSignals.InvokeAction(GameSignals.onPlayerDie);
+    }
+
+    private IEnumerator DieDone() {
+        yield return new WaitForSeconds(2.08f);
+        OnDieDone();
     }
 
     public void OnDieDone()

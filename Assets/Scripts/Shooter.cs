@@ -20,6 +20,7 @@ public class Shooter : MonoBehaviour,IChaseable
 
     [Header("Hint")]
     public LineRenderer line;
+    public GameObject hint;
     public float width;
     public float length;
 
@@ -264,6 +265,7 @@ public class Shooter : MonoBehaviour,IChaseable
     {
         if (canDisplay)
         {
+            hint.SetActive(true);
             var v0 = dir.y * force;
             var x0 = transform.position.y;
             var g = Physics.gravity.y;
@@ -282,6 +284,7 @@ public class Shooter : MonoBehaviour,IChaseable
                 vel += Physics.gravity * Time.fixedDeltaTime;
                 positions[i] = startPos;
             }
+            hint.transform.position = positions[positions.Length - 1];
             //line.material.mainTextureScale = new Vector2(count / 4f, 1);
             line.positionCount = count;
             line.SetPositions(positions);
@@ -291,6 +294,7 @@ public class Shooter : MonoBehaviour,IChaseable
         else
         {
             line.positionCount = 0;
+            hint.SetActive(false);
         }
     }
 

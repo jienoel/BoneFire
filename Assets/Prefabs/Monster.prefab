@@ -583,10 +583,6 @@ MonoBehaviour:
   bodyID: 2
   animator: {fileID: 0}
   colorIndex: 0
-  changeColor1: 0
-  changeColor2: 0
-  color1: 0
-  color2: 0
 --- !u!114 &114147090893816358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -600,7 +596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodTarget: {fileID: 0}
   monsterBodies: []
-  diamond: {fileID: 0}
+  diamond: {fileID: 1896863700908392, guid: 90d389b9098666c40af8469f57439e8b, type: 2}
   status: 0
   catchDistance: 0
   visualRange: 10
@@ -639,10 +635,6 @@ MonoBehaviour:
   bodyID: 0
   animator: {fileID: 95721851679470100}
   colorIndex: 0
-  changeColor1: 0
-  changeColor2: 0
-  color1: 0
-  color2: 0
 --- !u!114 &114349219411851474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -697,10 +689,6 @@ MonoBehaviour:
   bodyID: 1
   animator: {fileID: 0}
   colorIndex: 2
-  changeColor1: 0
-  changeColor2: 0
-  color1: 0
-  color2: 0
 --- !u!195 &195715545540720260
 NavMeshAgent:
   m_ObjectHideFlags: 1

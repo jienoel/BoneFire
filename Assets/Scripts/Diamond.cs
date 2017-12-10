@@ -14,6 +14,18 @@ public class Diamond : MonoBehaviour
         colorID = color;
     }
 
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.transform.tag == "Player") {
+            //            transform.parent = other.transform;
+            //            transform.localPosition = Vector3.zero;
+            //            GetComponent<Rigidbody>().useGravity = false;
+            //            GetComponent<Rigidbody>().isKinematic = true;
+            GameSignals.InvokeAction(GameSignals.onPlayerHitDiamond, colorID);
+            Destroy(transform.parent.gameObject);
+
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player")
@@ -23,7 +35,7 @@ public class Diamond : MonoBehaviour
 //            GetComponent<Rigidbody>().useGravity = false;
 //            GetComponent<Rigidbody>().isKinematic = true;
             GameSignals.InvokeAction(GameSignals.onPlayerHitDiamond, colorID);
-            GameObject.Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
            
         }
     }

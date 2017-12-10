@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -799,6 +799,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 705425548}
   fireRender: {fileID: 705425549}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &30845224
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1010,6 +1011,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 200968973}
   fireRender: {fileID: 200968974}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &35376653
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1349,6 +1351,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1793827231}
   fireRender: {fileID: 1793827232}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &51188150
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2016,6 +2019,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1999990167}
   fireRender: {fileID: 1999990168}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &86718799
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2136,6 +2140,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 533341147}
   fireRender: {fileID: 533341148}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &87444762
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3136,6 +3141,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1264658657}
   fireRender: {fileID: 1264658658}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &137515370
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4285,6 +4291,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 2142847193}
   fireRender: {fileID: 2142847194}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &208001320
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4478,6 +4485,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1084612724}
   fireRender: {fileID: 1084612725}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &211270658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4770,6 +4778,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1156410111}
   fireRender: {fileID: 1156410112}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &236549300
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5306,6 +5315,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 497981915}
   fireRender: {fileID: 497981916}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &271978612
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6185,6 +6195,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1662602556}
   fireRender: {fileID: 1662602557}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &314051797
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7682,6 +7693,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1263861030}
   fireRender: {fileID: 1263861031}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &414045727
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7802,6 +7814,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 972620486}
   fireRender: {fileID: 972620487}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &415156140
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8141,6 +8154,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1566083359}
   fireRender: {fileID: 1566083360}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &428951278
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8834,6 +8848,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1363503266}
   fireRender: {fileID: 1363503267}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &470536066
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9027,6 +9042,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 946397009}
   fireRender: {fileID: 946397010}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &481181957
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9293,6 +9309,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 935611471}
   fireRender: {fileID: 935611472}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &497910169
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9537,6 +9554,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 959937064}
   fireRender: {fileID: 959937065}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &513320290
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9763,6 +9781,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1536763826}
   fireRender: {fileID: 1536763827}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &521832807
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9956,6 +9975,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1643611294}
   fireRender: {fileID: 1643611295}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &528475366
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10076,6 +10096,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1828879164}
   fireRender: {fileID: 1828879165}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &530795390
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10527,7 +10548,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4640308688268110, guid: 313e375a53d90db4cb96620ea674e078, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 313e375a53d90db4cb96620ea674e078, type: 2}
@@ -11479,6 +11500,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 395646472}
   fireRender: {fileID: 395646473}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &603625608
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11632,6 +11654,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1904746032}
   fireRender: {fileID: 1904746033}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &604878281
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11843,6 +11866,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1482244703}
   fireRender: {fileID: 1482244704}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &621029628
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12069,6 +12093,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1272063518}
   fireRender: {fileID: 1272063519}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &627939424
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13077,6 +13102,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 2099646033}
   fireRender: {fileID: 2099646034}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &674122272
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13719,6 +13745,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1947510332}
   fireRender: {fileID: 1947510333}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &699909405
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14003,6 +14030,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 607177451}
   fireRender: {fileID: 607177452}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &705644120
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14269,6 +14297,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1783232512}
   fireRender: {fileID: 1783232513}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &715954890
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14873,6 +14902,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 765294924}
   fireRender: {fileID: 765294925}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &728769668
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15084,6 +15114,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 813185016}
   fireRender: {fileID: 813185017}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &735457916
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15237,6 +15268,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 81885760}
   fireRender: {fileID: 81885761}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &738986498
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15357,6 +15389,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 733494029}
   fireRender: {fileID: 733494030}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &752780030
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16400,6 +16433,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1022042631}
   fireRender: {fileID: 1022042632}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &839883324
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16790,6 +16824,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 96734490}
   fireRender: {fileID: 96734491}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &870546079
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16910,6 +16945,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1383625469}
   fireRender: {fileID: 1383625470}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &873034644
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17428,6 +17464,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 251801514}
   fireRender: {fileID: 251801515}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &904494701
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17639,6 +17676,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 409459685}
   fireRender: {fileID: 409459686}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &939887798
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17996,6 +18034,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 588335735}
   fireRender: {fileID: 588335736}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &952715393
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18681,6 +18720,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 277364924}
   fireRender: {fileID: 277364925}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &977841680
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18801,6 +18841,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 429602314}
   fireRender: {fileID: 429602315}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &990148239
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20618,6 +20659,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1890724094}
   fireRender: {fileID: 1890724095}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1179656827
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21227,6 +21269,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 541253640}
   fireRender: {fileID: 541253641}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1207714470
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21599,6 +21642,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1854698790}
   fireRender: {fileID: 1854698791}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1235325791
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22623,6 +22667,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1235847850}
   fireRender: {fileID: 1235847851}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1328644780
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22980,6 +23025,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1733199647}
   fireRender: {fileID: 1733199648}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1345358517
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23239,6 +23285,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 959656763}
   fireRender: {fileID: 959656764}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1354648944
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23917,6 +23964,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1452195118}
   fireRender: {fileID: 1452195119}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1384716283
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24183,6 +24231,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 335015546}
   fireRender: {fileID: 335015547}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1407090139
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24686,6 +24735,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 2081524320}
   fireRender: {fileID: 2081524321}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1438351697
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25094,6 +25144,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1595544725}
   fireRender: {fileID: 1595544726}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1468269575
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25393,6 +25444,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1368209108}
   fireRender: {fileID: 1368209109}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1473571427
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25874,6 +25926,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 10475740}
   fireRender: {fileID: 10475741}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1500709155
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25994,6 +26047,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1807968147}
   fireRender: {fileID: 1807968148}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1504194786
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26187,6 +26241,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1188964832}
   fireRender: {fileID: 1188964833}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1505054739
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26960,6 +27015,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 30849555}
   fireRender: {fileID: 30849556}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1546283383
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27080,6 +27136,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1535340855}
   fireRender: {fileID: 1535340856}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1547944151
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28171,6 +28228,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 272524375}
   fireRender: {fileID: 272524376}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1623299226
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28364,6 +28422,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 856586127}
   fireRender: {fileID: 856586128}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1632359684
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29094,6 +29153,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 80576464}
   fireRender: {fileID: 80576465}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1665836894
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29476,7 +29536,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4640308688268110, guid: 313e375a53d90db4cb96620ea674e078, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1767277744118036, guid: 313e375a53d90db4cb96620ea674e078, type: 2}
       propertyPath: m_Name
@@ -29809,6 +29869,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 158721947}
   fireRender: {fileID: 158721948}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1717967774
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30121,6 +30182,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 21234422}
   fireRender: {fileID: 21234423}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1728010005
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30332,6 +30394,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 689951063}
   fireRender: {fileID: 689951064}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1739207662
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30598,6 +30661,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1916456415}
   fireRender: {fileID: 1916456416}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1751395530
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30897,6 +30961,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 178667865}
   fireRender: {fileID: 178667866}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1770277946
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31976,6 +32041,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 429390340}
   fireRender: {fileID: 429390341}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1843248103
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32260,6 +32326,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1439689391}
   fireRender: {fileID: 1439689392}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1854313107
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32544,6 +32611,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1270070003}
   fireRender: {fileID: 1270070004}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1859706058
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33339,6 +33407,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1997309009}
   fireRender: {fileID: 1997309010}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1901861774
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33787,6 +33856,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1845334783}
   fireRender: {fileID: 1845334784}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1924107810
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34190,6 +34260,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1645195940}
   fireRender: {fileID: 1645195941}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1951035882
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34310,6 +34381,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1344124966}
   fireRender: {fileID: 1344124967}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1957784150
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34879,6 +34951,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1662984953}
   fireRender: {fileID: 1662984954}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &1972459009
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35995,6 +36068,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1965492027}
   fireRender: {fileID: 1965492028}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &2018634492
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36188,6 +36262,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1433132512}
   fireRender: {fileID: 1433132513}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &2027679184
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36351,7 +36426,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4344644996249024, guid: 6b12c98931c63447091e21d81a9eea20, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b12c98931c63447091e21d81a9eea20, type: 2}
@@ -36496,6 +36571,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 380782292}
   fireRender: {fileID: 380782293}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &2066725636
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -36788,6 +36864,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 781897149}
   fireRender: {fileID: 781897150}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &2077160463
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37105,6 +37182,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1177539991}
   fireRender: {fileID: 1177539992}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &2095723313
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37641,6 +37719,7 @@ MonoBehaviour:
   fireAnimator: {fileID: 1842902224}
   fireRender: {fileID: 1842902225}
   isOnFire: 0
+  isDestroyed: 0
 --- !u!23 &2131581048
 MeshRenderer:
   m_ObjectHideFlags: 0

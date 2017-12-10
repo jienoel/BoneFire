@@ -79,6 +79,9 @@ public class Game : MonoBehaviour
         GameSignals.onFirePileExtinguish += OnFirePileExtinguish;
         GameSignals.onTreeFired += OnTreeFired;
         GameSignals.onTreeDestroy += OnTreeDestroyed;
+        GameSignals.onPrinceInSafeArea += PrincessInSafeArea;
+        GameSignals.onFinishDiamond += FinishDiamond;
+
     }
 
     void OnDestroy()
@@ -87,10 +90,23 @@ public class Game : MonoBehaviour
         GameSignals.onFirePileExtinguish -= OnFirePileExtinguish;
         GameSignals.onTreeFired -= OnTreeFired;
         GameSignals.onTreeDestroy -= OnTreeDestroyed;
+        GameSignals.onPrinceInSafeArea -= PrincessInSafeArea;
+        GameSignals.onFinishDiamond -= FinishDiamond;
+
     }
 
     bool princessInSafeArea;
     bool finishDiamond;
+
+    void FinishDiamond()
+    {
+        finishDiamond = true;
+    }
+
+    void PrincessInSafeArea()
+    {
+        princessInSafeArea = true;
+    }
     // Update is called once per frame
     void Update()
     {

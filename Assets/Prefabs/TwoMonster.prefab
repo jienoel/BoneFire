@@ -189,7 +189,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1688208054154044}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.15, y: 0.58, z: -26.35}
+  m_LocalPosition: {x: -32.82, y: 0.58, z: -24.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4379911676930748}
@@ -480,7 +480,7 @@ MonoBehaviour:
   status: 0
   catchDistance: 0
   visualRange: 10
-  foodVisualRange: 60
+  foodVisualRange: 10
   waitCD: 0
   waitCDMax: 15
   stayCDWhenChaseBlock: 10

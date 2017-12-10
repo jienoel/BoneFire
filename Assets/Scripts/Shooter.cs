@@ -285,7 +285,9 @@ public class Shooter : MonoBehaviour,IChaseable
                 vel += Physics.gravity * Time.fixedDeltaTime;
                 positions[i] = startPos;
             }
-            hint.transform.position = positions[positions.Length - 1];
+            if (count > 0) {
+                hint.transform.position = positions[positions.Length - 1];
+            }
             //line.material.mainTextureScale = new Vector2(count / 4f, 1);
             line.positionCount = count;
             line.SetPositions(positions);

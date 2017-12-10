@@ -271,7 +271,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d979601c07885416090cf5457732a915, type: 3}
   startPos: {fileID: 0}
   attackPlayer: 0
-  damage: 10
+  damage: 5
   relivePlayer: 0
 --- !u!114 &114720688695079470
 MonoBehaviour:

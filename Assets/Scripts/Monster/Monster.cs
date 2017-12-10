@@ -308,7 +308,6 @@ public class Monster : MonoBehaviour
 
     void ChaseTargetOrFood(GameObject chaseTarget)
     {
-//        Debug.Log(Vector3.Distance(transform.position, chaseTarget.transform.position));
         if (Vector3.Distance(transform.position, chaseTarget.transform.position) < catchDistance)
         {
             Debug.Log("Arrive Chase Target");

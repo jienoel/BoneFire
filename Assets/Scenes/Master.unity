@@ -4753,7 +4753,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 386742743}
   m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: -34, y: 4.9, z: -48}
+  m_LocalPosition: {x: -34, y: 6.9, z: -55.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4773,8 +4773,8 @@ MonoBehaviour:
   target: {fileID: 391432145}
   xMax: -11.5
   xMin: -35.5
-  yMax: 17
-  yMin: -51
+  yMax: 9
+  yMin: -59
   xWindow: 2
   yWindow: 7
 --- !u!114 &386742749
@@ -29230,6 +29230,31 @@ Prefab:
     - target: {fileID: 1058953187702412, guid: b15074d917d9e6d439c6a297022b4a53, type: 2}
       propertyPath: m_Name
       value: Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 120820152235968406, guid: b15074d917d9e6d439c6a297022b4a53,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key1.a
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 120820152235968406, guid: b15074d917d9e6d439c6a297022b4a53,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.key0.a
+      value: 0.2509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 120820152235968406, guid: b15074d917d9e6d439c6a297022b4a53,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.atime1
+      value: 6554
+      objectReference: {fileID: 0}
+    - target: {fileID: 120820152235968406, guid: b15074d917d9e6d439c6a297022b4a53,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.atime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 120820152235968406, guid: b15074d917d9e6d439c6a297022b4a53,
+        type: 2}
+      propertyPath: m_Parameters.colorGradient.m_NumAlphaKeys
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b15074d917d9e6d439c6a297022b4a53, type: 2}
